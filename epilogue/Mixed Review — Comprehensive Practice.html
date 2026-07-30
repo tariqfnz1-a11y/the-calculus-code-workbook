@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixed Review — Comprehensive Practice</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav>
+        <a href="../index.html">← Dashboard</a>
+        <span>|</span>
+        <span><strong>📝 Mixed Review — Comprehensive Practice</strong></span>
+        <span style="margin-left:auto;" id="chapter-progress">Progress: 0/15</span>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+
+        <h1>📝 Mixed Review — Comprehensive Practice</h1>
+        <p style="color:#555; font-size:15px; margin-bottom:20px;">
+            "Test your knowledge across all 11 chapters. These problems cover everything from the Big Secret to Optimization."
+        </p>
+
+        <div style="background:#f0f4f8; border:1px solid #dce4ec; border-radius:4px; padding:12px 20px; margin-bottom:24px; text-align:center;">
+            <p style="font-size:14px; color:#555; margin:0;">
+                📊 <strong>Topics Covered:</strong> Functions · Limits · Slope · Power Rule · Integrals · Area · Fundamental Theorem · e^x · Sine/Cosine · Optimization
+            </p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM M1                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="mixed" data-problem="m1">
+            <div class="problem-header">
+                <span class="problem-number">Problem M1 of 15</span>
+                <span class="problem-status" id="status-mixed-m1">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What are the <strong>two questions</strong> that all of calculus answers?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Think about speedometer and odometer.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-mixed-m1" placeholder="How fast is it changing right now? How much total change happened?" style="width:500px;">
+                <button onclick="checkAnswer('mixed', 'm1', 'How fast is it changing right now? How much total change happened?')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-mixed-m1"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-mixed-m1')">💡 Hint</button>
+                <div id="hint-mixed-m1" style="display:none;">
+                    <p>One question is about the <strong>speedometer</strong> (instant speed). The other is about the <strong>odometer</strong> (total distance).</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-mixed-m1')">📝 Solution</button>
+                <div id="solution-mixed-m1" style="display:none;">
+                    <p><strong>The two questions of calculus are:</strong></p>
+                    <ol>
+                        <li><strong>How fast is it changing right now?</strong> (Derivative — like a speedometer)</li>
+                        <li><strong>How much total change happened?</strong> (Integral — like an odometer)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM M2                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="mixed" data-problem="m2">
+            <div class="problem-header">
+                <span class="problem-number">Problem M2 of 15</span>
+                <span class="problem-status" id="status-mixed-m2">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> In the function $y = 3x + 2$, what is $y$ when $x = 4$?</p>
+            </div>
+            <div class="answer-area">
+                <label>$y =$</label>
+                <input type="text" id="answer-mixed-m2" placeholder="14">
+                <button onclick="checkAnswer('mixed', 'm2', '14')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-mixed-m2"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-mixed-m2')">💡 Hint</button>
+                <div id="hint-mixed-m2" style="display:none;">
+                    <p>Multiply $x$ by 3, then add 2.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-mixed-m2')">📝 Solution</button>
+                <div id="solution-mixed-m2" style="display:none;">
+                    <p>$y = 3x + 2$</p>
+                    <p>When $x = 4$: $y = 3(4) + 2 = 12 + 2 = <strong>14</strong>$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM M3                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="mixed" data-problem="m3">
+            <div class="problem-header">
+                <span class="problem-number">Problem M3 of 15</span>
+                <span class="problem-status" id="status-mixed-m3">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> For $d = t^2$, what is the <strong>instant speed</strong> at $t = 4$ seconds?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: The derivative of $t^2$ is $2t$.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Speed =</label>
+                <input type="text" id="answer-mixed-m3" placeholder="8 m/s">
+                <button onclick="checkAnswer('mixed', 'm3', '8 m/s')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-mixed-m3"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-mixed-m3')">💡 Hint</button>
+                <div id="hint-mixed-m3" style="display:none;">
+                    <p>Speed = $2 \times t$. Plug in $t = 4$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-mixed-m3')">📝 Solution</button>
+                <div id="solution-mixed-m3" style="display:none;">
+                    <p>Speed = $2 \times t = 2 \times 4 = <strong>8 m/s</strong>$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM M4                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="mixed" data-problem="m4">
+            <div class="problem-header">
+                <span class="problem-number">Problem M4 of 15</span>
+                <span class="problem-status" id="status-mixed-m4">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Find the slope between the points $(1, 5)$ and $(4, 14)$.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Slope = Rise ÷ Run.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Slope =</label>
+                <input type="text" id="answer-mixed-m4" placeholder="3">
+                <button onclick="checkAnswer('mixed', 'm4', '3')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-mixed-m4"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-mixed-m4')">💡 Hint</button>
+                <div id="hint-mixed-m4" style="display:none;">
+                    <p>Rise = $14 - 5 = 9$, Run = $4 - 1 = 3$</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-mixed-m4')">📝 Solution</button>
+                <div id="solution-mixed-m4" style="display:none;">
+                    <p>Rise = $14 - 5 = 9$</p>
+                    <p>Run = $4 - 1 = 3$</p>
+                    <p>Slope = $9 \div 3 = <strong>3</strong>$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM M5                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="mixed" data-problem="m5">
+            <div class="problem-header">
+                <span class="problem-number">Problem M5 of 15</span>
+                <span class="problem-status" id="status-mixed-m5">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Find the derivative of $f(x) = x^5$.</p>
+            </div>
+            <div class="answer-area">
+                <label>$f'(x) =$</label>
+                <input type="text" id="answer-mixed-m5" placeholder="5x^4">
+                <button onclick="checkAnswer('mixed', 'm5', '5x^4')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-mixed-m5"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-mixed-m5')">💡 Hint</button>
+                <div id="hint-mixed-m5" style="display:none;">
+                    <p>Bring the exponent down in front, then subtract 1.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-mixed-m5')">📝 Solution</button>
+                <div id="solution-mixed-m5" style="display:none;">
+                    <p>$f(x) = x^5$</p>
+                    <p>$f'(x) = 5x^{5-1} = <strong>5x^4</strong>$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM M6                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="mixed" data-problem="m6">
+            <div class="problem-header">
+                <span class="problem-number">Problem M6 of 15</span>
+                <span class="problem-status" id="status-mixed-m6">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Find the derivative of $f(x) = 3x^4$.</p>
+            </div>
+            <div class="answer-area">
+                <label>$f'(x) =$</label>
+                <input type="text" id="answer-mixed-m6" placeholder="12x^3">
+                <button onclick="checkAnswer('mixed', 'm6', '12x^3')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-mixed-m6"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-mixed-m6')">💡 Hint</button>
+                <div id="hint-mixed-m6" style="display:none;">
+                    <p>Coefficient × exponent, then reduce exponent by 1.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-mixed-m6')">📝 Solution</button>
+                <div id="solution-mixed-m6" style="display:none;">
+                    <p>$f(x) = 3x^4$</p>
+                    <p>$f'(x) = 3 \times 4 \times x^{4-1} = <strong>12x^3</strong>$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM M7                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="mixed" data-problem="m7">
+            <div class="problem-header">
+                <span class="problem-number">Problem M7 of 15</span>
+                <span class="problem-status" id="status-mixed-m7">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Find the antiderivative of $2x$.</p>
+            </div>
+            <div class="answer-area">
+                <label>$\int 2x \, dx =$</label>
+                <input type="text" id="answer-mixed-m7" placeholder="x^2 + C">
+                <button onclick="checkAnswer('mixed', 'm7', 'x^2 + C')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-mixed-m7"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-mixed-m7')">💡 Hint</button>
+                <div id="hint-mixed-m7" style="display:none;">
+                    <p>What function has derivative $2x$? Don't forget the constant $C$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-mixed-m7')">📝 Solution</button>
+                <div id="solution-mixed-m7" style="display:none;">
+                    <p>$\int 2x \, dx = <strong>x^2 + C</strong>$</p>
+                    <p>Check: derivative of $x^2 + C$ is $2x$. ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM M8                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="mixed" data-problem="m8">
+            <div class="problem-header">
+                <span class="problem-number">Problem M8 of 15</span>
+                <span class="problem-status" id="status-mixed-m8">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Find the area under $y = x^2$ from $x = 0$ to $x = 3$ using the Fundamental Theorem.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Antiderivative of $x^2$ is $x^3/3$.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Area =</label>
+                <input type="text" id="answer-mixed-m8" placeholder="9">
+                <button onclick="checkAnswer('mixed', 'm8', '9')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-mixed-m8"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-mixed-m8')">💡 Hint</button>
+                <div id="hint-mixed-m8" style="display:none;">
+                    <p>$F(3) = 27/3 = 9$, $F(0) = 0$. Area = $F(3) - F(0)$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-mixed-m8')">📝 Solution</button>
+                <div id="solution-mixed-m8" style="display:none;">
+                    <p>$F(x) = \int x^2 \, dx = \frac{x^3}{3} + C$</p>
+                    <p>$F(3) = \frac{27}{3} = 9$</p>
+                    <p>$F(0) = 0$</p>
+                    <p>Area = $9 - 0 = <strong>9</strong>$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM M9                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="mixed" data-problem="m9">
+            <div class="problem-header">
+                <span class="problem-number">Problem M9 of 15</span>
+                <span class="problem-status" id="status-mixed-m9">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What is the derivative of $e^x$?</p>
+            </div>
+            <div class="answer-area">
+                <label>$\frac{d}{dx} e^x =$</label>
+                <input type="text" id="answer-mixed-m9" placeholder="e^x">
+                <button onclick="checkAnswer('mixed', 'm9', 'e^x')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-mixed-m9"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-mixed-m9')">💡 Hint</button>
+                <div id="hint-mixed-m9" style="display:none;">
+                    <p>$e^x$ is its own derivative.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-mixed-m9')">📝 Solution</button>
+                <div id="solution-mixed-m9" style="display:none;">
+                    <p>$\frac{d}{dx} e^x = <strong>e^x</strong>$</p>
+                    <p>This is the super-function property!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM M10                                                   -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="mixed" data-problem="m10">
+            <div class="problem-header">
+                <span class="problem-number">Problem M10 of 15</span>
+                <span class="problem-status" id="status-mixed-m10">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Find the derivative of $f(x) = e^{3x}$.</p>
+            </div>
+            <div class="answer-area">
+                <label>$f'(x) =$</label>
+                <input type="text" id="answer-mixed-m10" placeholder="3e^{3x}">
+                <button onclick="checkAnswer('mixed', 'm10', '3e^{3x}')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-mixed-m10"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-mixed-m10')">💡 Hint</button>
+                <div id="hint-mixed-m10" style="display:none;">
+                    <p>The derivative of $e^{kx}$ is $k \times e^{kx}$. Here $k = 3$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-mixed-m10')">📝 Solution</button>
+                <div id="solution-mixed-m10" style="display:none;">
+                    <p>$f(x) = e^{3x}$</p>
+                    <p>$f'(x) = 3 \times e^{3x} = <strong>3e^{3x}</strong>$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM M11                                                   -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="mixed" data-problem="m11">
+            <div class="problem-header">
+                <span class="problem-number">Problem M11 of 15</span>
+                <span class="problem-status" id="status-mixed-m11">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What is the derivative of $\sin(x)$?</p>
+            </div>
+            <div class="answer-area">
+                <label>$\frac{d}{dx} \sin(x) =$</label>
+                <input type="text" id="answer-mixed-m11" placeholder="cos(x)">
+                <button onclick="checkAnswer('mixed', 'm11', 'cos(x)')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-mixed-m11"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-mixed-m11')">💡 Hint</button>
+                <div id="hint-mixed-m11" style="display:none;">
+                    <p>The derivative of sine is cosine.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-mixed-m11')">📝 Solution</button>
+                <div id="solution-mixed-m11" style="display:none;">
+                    <p>$\frac{d}{dx} \sin(x) = <strong>\cos(x)</strong>$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM M12                                                   -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="mixed" data-problem="m12">
+            <div class="problem-header">
+                <span class="problem-number">Problem M12 of 15</span>
+                <span class="problem-status" id="status-mixed-m12">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Find the derivative of $f(x) = \cos(2x)$.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: derivative of $\cos(kx)$ is $-k\sin(kx)$.)</p>
+            </div>
+            <div class="answer-area">
+                <label>$f'(x) =$</label>
+                <input type="text" id="answer-mixed-m12" placeholder="-2sin(2x)">
+                <button onclick="checkAnswer('mixed', 'm12', '-2sin(2x)')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-mixed-m12"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-mixed-m12')">💡 Hint</button>
+                <div id="hint-mixed-m12" style="display:none;">
+                    <p>$k = 2$ in $\cos(2x)$. So derivative is $-2\sin(2x)$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-mixed-m12')">📝 Solution</button>
+                <div id="solution-mixed-m12" style="display:none;">
+                    <p>$f(x) = \cos(2x)$</p>
+                    <p>$f'(x) = -2 \times \sin(2x) = <strong>-2\sin(2x)</strong>$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM M13                                                   -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="mixed" data-problem="m13">
+            <div class="problem-header">
+                <span class="problem-number">Problem M13 of 15</span>
+                <span class="problem-status" id="status-mixed-m13">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> For $f(x) = -x^2 + 6x$, find the critical point.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Find $f'(x)$ and set it to zero.)</p>
+            </div>
+            <div class="answer-area">
+                <label>$x =$</label>
+                <input type="text" id="answer-mixed-m13" placeholder="3">
+                <button onclick="checkAnswer('mixed', 'm13', '3')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-mixed-m13"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-mixed-m13')">💡 Hint</button>
+                <div id="hint-mixed-m13" style="display:none;">
+                    <p>$f'(x) = -2x + 6$. Set to zero: $-2x + 6 = 0$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-mixed-m13')">📝 Solution</button>
+                <div id="solution-mixed-m13" style="display:none;">
+                    <p>$f(x) = -x^2 + 6x$</p>
+                    <p>$f'(x) = -2x + 6$</p>
+                    <p>Set $f'(x) = 0$: $-2x + 6 = 0$</p>
+                    <p>$2x = 6$</p>
+                    <p>$x = <strong>3</strong>$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM M14                                                   -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="mixed" data-problem="m14">
+            <div class="problem-header">
+                <span class="problem-number">Problem M14 of 15</span>
+                <span class="problem-status" id="status-mixed-m14">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> A rectangle has a perimeter of 40 meters. What is the <strong>maximum possible area</strong>?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: The square maximizes area. Find the side length.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Maximum area =</label>
+                <input type="text" id="answer-mixed-m14" placeholder="100">
+                <button onclick="checkAnswer('mixed', 'm14', '100')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-mixed-m14"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-mixed-m14')">💡 Hint</button>
+                <div id="hint-mixed-m14" style="display:none;">
+                    <p>$2x + 2y = 40$ → $y = 20 - x$.</p>
+                    <p>$A(x) = x(20 - x) = 20x - x^2$.</p>
+                    <p>Find the maximum at $x = 10$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-mixed-m14')">📝 Solution</button>
+                <div id="solution-mixed-m14" style="display:none;">
+                    <p>Perimeter: $2x + 2y = 40$ → $y = 20 - x$</p>
+                    <p>Area: $A(x) = x(20 - x) = 20x - x^2$</p>
+                    <p>$A'(x) = 20 - 2x$</p>
+                    <p>Set $A'(x) = 0$: $20 - 2x = 0$ → $x = 10$</p>
+                    <p>$y = 20 - 10 = 10$</p>
+                    <p>Area = $10 \times 10 = <strong>100</strong>$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM M15                                                   -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="mixed" data-problem="m15">
+            <div class="problem-header">
+                <span class="problem-number">Problem M15 of 15</span>
+                <span class="problem-status" id="status-mixed-m15">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Explain the <strong>Fundamental Theorem of Calculus</strong> in your own words. Why is it called the "Great Reversal"?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Write a complete explanation.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Your explanation:</label>
+                <input type="text" id="answer-mixed-m15" placeholder="The Fundamental Theorem says that differentiation and integration are inverse operations..." style="width:550px;">
+                <button onclick="checkPoliceProof('mixed', 'm15', 'fundamental theorem derivative integral inverse opposite undo slope area reversal')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-mixed-m15"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-mixed-m15')">💡 Hint</button>
+                <div id="hint-mixed-m15" style="display:none;">
+                    <p>Before the theorem, slope and area were seen as separate. What did the theorem reveal?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-mixed-m15')">📝 Solution</button>
+                <div id="solution-mixed-m15" style="display:none;">
+                    <p>The <strong>Fundamental Theorem of Calculus</strong> says that <strong>differentiation and integration are inverse operations</strong> — they undo each other.</p>
+                    <ul>
+                        <li>If you differentiate and then integrate, you get back where you started.</li>
+                        <li>If you integrate and then differentiate, you get back where you started.</li>
+                    </ul>
+                    <p>It's called the <strong>"Great Reversal"</strong> because it <strong>reversed</strong> how people thought about calculus. Before the theorem, <strong>slope</strong> (derivative) and <strong>area</strong> (integral) were seen as separate. The theorem unified them into one elegant theory.</p>
+                    <p>This is the single most important idea in calculus!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- NAVIGATION                                                   -->
+        <!-- ============================================================ -->
+        <div class="navigation">
+            <a href="police-proofs.html" class="btn">← Police Proofs</a>
+            <a href="../index.html" class="btn">🏠 Back to Dashboard</a>
+        </div>
+
+        <div style="text-align:center; margin:20px 0; font-size:13px; color:#aaa;">
+            <button onclick="resetAllProgress()" style="background:none; border:1px solid #ddd; border-radius:4px; padding:4px 12px; color:#999; cursor:pointer; font-size:12px;">
+                🔄 Reset All Progress
+            </button>
+        </div>
+
+        <div style="text-align:center; margin:20px 0; padding:16px; background:#e8f0e8; border-radius:4px; border:1px solid #27ae60;">
+            <p style="font-size:15px; color:#2c3e50; margin:0;">
+                🎉 <strong>Congratulations!</strong> You've completed all 15 Mixed Review problems.<br>
+                <span style="font-size:13px; color:#555;">Check the dashboard to see your overall progress across all chapters.</span>
+            </p>
+        </div>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2026 TM BHinder · The Calculus Code</p>
+        <p class="small" style="font-size:12px; color:#bbb;">Progress saved in your browser's local storage</p>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../assets/js/progress.js"></script>
+    <script>
+        // Police Proof checker for M15 — checks for key concepts in the answer
+        function checkPoliceProof(chapter, problem, keyWords) {
+            let input = document.getElementById('answer-' + chapter + '-' + problem);
+            let feedback = document.getElementById('feedback-' + chapter + '-' + problem);
+            let status = document.getElementById('status-' + chapter + '-' + problem);
+
+            if (!input) return;
+
+            let userAnswer = input.value.trim().toLowerCase();
+            let keys = keyWords.toLowerCase().split(' ');
+
+            let foundCount = 0;
+            for (let k of keys) {
+                if (userAnswer.includes(k)) {
+                    foundCount++;
+                }
+            }
+
+            if (foundCount >= 3) {
+                feedback.innerHTML = '✅ Excellent explanation! You clearly understand the Fundamental Theorem and its significance.';
+                feedback.className = 'feedback correct';
+                if (status) status.textContent = '✅';
+                Progress.markSolved(chapter, problem);
+            } else {
+                feedback.innerHTML = '❌ Your answer needs more detail. Try to include the key concepts: <strong>' + keyWords + '</strong>.';
+                feedback.className = 'feedback incorrect';
+            }
+        }
+    </script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

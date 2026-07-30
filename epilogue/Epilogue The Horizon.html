@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epilogue — The Horizon</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav>
+        <a href="../index.html">← Dashboard</a>
+        <span>|</span>
+        <span><strong>🌅 Epilogue: The Horizon</strong></span>
+        <span style="margin-left:auto;" id="chapter-progress">Progress: 0/12</span>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+
+        <h1>🌅 Epilogue: The Horizon</h1>
+        <p style="color:#555; font-size:15px; margin-bottom:20px;">
+            "You've learned the language of change. Now it's time to see it everywhere."
+        </p>
+
+        <div style="background:#f4f0f8; border:2px solid #8e44ad; border-radius:4px; padding:16px 24px; margin-bottom:24px; text-align:center;">
+            <p style="font-size:16px; color:#2c3e50; margin:0; font-style:italic;">
+                "Calculus isn't a subject. It's a lens. Once you see through it, you see the world differently."
+            </p>
+            <p style="font-size:13px; color:#888; margin-top:4px;">— The Horizon</p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM E1                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="epilogue" data-problem="e1">
+            <div class="problem-header">
+                <span class="problem-number">Problem E1 of 12</span>
+                <span class="problem-status" id="status-epilogue-e1">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What are the <strong>two big questions</strong> of calculus?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Speedometer and odometer.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-epilogue-e1" placeholder="How fast is it changing NOW? How much total change happened?" style="width:500px;">
+                <button onclick="checkAnswer('epilogue', 'e1', 'How fast is it changing NOW? How much total change happened?')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-epilogue-e1"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-epilogue-e1')">💡 Hint</button>
+                <div id="hint-epilogue-e1" style="display:none;">
+                    <p>Think about the speedometer (instant) and odometer (total).</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-epilogue-e1')">📝 Solution</button>
+                <div id="solution-epilogue-e1" style="display:none;">
+                    <p>The two big questions of calculus are:</p>
+                    <ol>
+                        <li><strong>How fast is it changing NOW?</strong> (Derivative — speedometer)</li>
+                        <li><strong>How much total change happened?</strong> (Integral — odometer)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM E2                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="epilogue" data-problem="e2">
+            <div class="problem-header">
+                <span class="problem-number">Problem E2 of 12</span>
+                <span class="problem-status" id="status-epilogue-e2">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Why is <strong>optimization</strong> important in <strong>data science</strong>?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Think about training models and minimizing error.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-epilogue-e2" placeholder="Optimization is used to minimize error functions when training machine learning models." style="width:550px;">
+                <button onclick="checkPoliceProof('epilogue', 'e2', 'optimization data science error minimize function train model')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-epilogue-e2"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-epilogue-e2')">💡 Hint</button>
+                <div id="hint-epilogue-e2" style="display:none;">
+                    <p>In machine learning, you find the minimum of an error function to make better predictions.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-epilogue-e2')">📝 Solution</button>
+                <div id="solution-epilogue-e2" style="display:none;">
+                    <p>Optimization is important in <strong>data science</strong> because it is used to <strong>minimize error functions</strong> when training machine learning models.</p>
+                    <p>When a model makes predictions, there is an error. By finding the <strong>minimum of the error function</strong> (using calculus), the model learns to make more accurate predictions.</p>
+                    <p>This is called <strong>gradient descent</strong> — and it's powered by derivatives!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM E3                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="epilogue" data-problem="e3">
+            <div class="problem-header">
+                <span class="problem-number">Problem E3 of 12</span>
+                <span class="problem-status" id="status-epilogue-e3">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> How does calculus help in <strong>physics</strong>?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Think about motion, speed, acceleration.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-epilogue-e3" placeholder="Calculus describes motion — speed is derivative, acceleration is second derivative." style="width:550px;">
+                <button onclick="checkPoliceProof('epilogue', 'e3', 'physics motion speed acceleration derivative integral position velocity')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-epilogue-e3"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-epilogue-e3')">💡 Hint</button>
+                <div id="hint-epilogue-e3" style="display:none;">
+                    <p>Speed is the derivative of position. Acceleration is the derivative of speed.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-epilogue-e3')">📝 Solution</button>
+                <div id="solution-epilogue-e3" style="display:none;">
+                    <p>Calculus helps in <strong>physics</strong> by describing <strong>motion</strong>:</p>
+                    <ul>
+                        <li><strong>Position</strong> → Derivative = <strong>Speed</strong></li>
+                        <li><strong>Speed</strong> → Derivative = <strong>Acceleration</strong></li>
+                        <li><strong>Speed</strong> → Integral = <strong>Total Distance</strong></li>
+                    </ul>
+                    <p>Everything from falling objects to planetary orbits is described using calculus!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM E4                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="epilogue" data-problem="e4">
+            <div class="problem-header">
+                <span class="problem-number">Problem E4 of 12</span>
+                <span class="problem-status" id="status-epilogue-e4">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What role does $e^x$ play in <strong>finance and economics</strong>?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Think about continuous compounding interest.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-epilogue-e4" placeholder="e^x models continuous growth — used in compound interest, population growth, and market trends." style="width:550px;">
+                <button onclick="checkPoliceProof('epilogue', 'e4', 'finance economics e^x continuous growth interest compound population')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-epilogue-e4"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-epilogue-e4')">💡 Hint</button>
+                <div id="hint-epilogue-e4" style="display:none;">
+                    <p>When interest is compounded continuously, the growth follows e^x.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-epilogue-e4')">📝 Solution</button>
+                <div id="solution-epilogue-e4" style="display:none;">
+                    <p>$e^x$ models <strong>continuous growth</strong> in finance and economics.</p>
+                    <ul>
+                        <li><strong>Compound interest:</strong> Money grows continuously with the formula $A(t) = P \cdot e^{rt}$</li>
+                        <li><strong>Population growth:</strong> Populations grow at rates proportional to their size</li>
+                        <li><strong>Market trends:</strong> Many economic models use exponential growth and decay</li>
+                    </ul>
+                    <p>This is why $e^x$ is called the "universal growth function."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM E5                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="epilogue" data-problem="e5">
+            <div class="problem-header">
+                <span class="problem-number">Problem E5 of 12</span>
+                <span class="problem-status" id="status-epilogue-e5">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> How are <strong>sine and cosine</strong> used in <strong>medicine</strong>?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Think about heart rhythms and EKGs.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-epilogue-e5" placeholder="Sine and cosine are used to model heart rhythms (EKGs) and other biological cycles." style="width:550px;">
+                <button onclick="checkPoliceProof('epilogue', 'e5', 'sine cosine medicine heart EKG rhythm cycle wave')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-epilogue-e5"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-epilogue-e5')">💡 Hint</button>
+                <div id="hint-epilogue-e5" style="display:none;">
+                    <p>The heart beats in a repeating cycle — sine waves model that rhythm.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-epilogue-e5')">📝 Solution</button>
+                <div id="solution-epilogue-e5" style="display:none;">
+                    <p>Sine and cosine are used in <strong>medicine</strong> to model <strong>cycles and rhythms</strong>:</p>
+                    <ul>
+                        <li><strong>EKGs (heart monitoring):</strong> The heart's electrical activity is a repeating wave.</li>
+                        <li><strong>Brain waves:</strong> EEG signals are wave patterns.</li>
+                        <li><strong>Breathing cycles:</strong> The rhythm of breathing is periodic.</li>
+                        <li><strong>Drug concentrations:</strong> Some drugs create cyclic patterns in the body.</li>
+                    </ul>
+                    <p>Any repeating biological process can be described using sine and cosine!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM E6                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="epilogue" data-problem="e6">
+            <div class="problem-header">
+                <span class="problem-number">Problem E6 of 12</span>
+                <span class="problem-status" id="status-epilogue-e6">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> How does calculus help <strong>AI and machine learning</strong> learn?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Think about gradient descent and optimization.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-epilogue-e6" placeholder="AI uses calculus to minimize error functions and learn patterns through gradient descent." style="width:550px;">
+                <button onclick="checkPoliceProof('epilogue', 'e6', 'AI gradient descent optimization error derivative neural network machine learning')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-epilogue-e6"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-epilogue-e6')">💡 Hint</button>
+                <div id="hint-epilogue-e6" style="display:none;">
+                    <p>AI learns by finding the minimum error. That's optimization — which uses derivatives.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-epilogue-e6')">📝 Solution</button>
+                <div id="solution-epilogue-e6" style="display:none;">
+                    <p>AI and machine learning use calculus through <strong>gradient descent</strong>:</p>
+                    <ul>
+                        <li>The model makes predictions and calculates <strong>error</strong>.</li>
+                        <li>Using <strong>derivatives</strong>, the model finds the <strong>direction</strong> to adjust its parameters.</li>
+                        <li>It keeps adjusting until the <strong>error is minimized</strong> (optimization).</li>
+                    </ul>
+                    <p>This is exactly the <strong>optimization</strong> you learned in Chapter 11 — applied to millions of parameters!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM E7                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="epilogue" data-problem="e7">
+            <div class="problem-header">
+                <span class="problem-number">Problem E7 of 12</span>
+                <span class="problem-status" id="status-epilogue-e7">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> The <strong>final code</strong> of calculus: What does it tell you?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Think about the derivative, integral, and Fundamental Theorem.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-epilogue-e7" placeholder="The code tells you how fast things change and how much accumulates — and that they are opposites." style="width:550px;">
+                <button onclick="checkPoliceProof('epilogue', 'e7', 'derivative integral fundamental theorem opposites change accumulate code')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-epilogue-e7"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-epilogue-e7')">💡 Hint</button>
+                <div id="hint-epilogue-e7" style="display:none;">
+                    <p>The two questions of calculus and the Fundamental Theorem are the "code."</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-epilogue-e7')">📝 Solution</button>
+                <div id="solution-epilogue-e7" style="display:none;">
+                    <p>The <strong>final code</strong> of calculus tells you:</p>
+                    <ul>
+                        <li>The <strong>derivative</strong> answers: "How fast is it changing NOW?"</li>
+                        <li>The <strong>integral</strong> answers: "How much total change happened?"</li>
+                        <li>The <strong>Fundamental Theorem</strong> says they are <strong>opposites</strong> — they undo each other.</li>
+                    </ul>
+                    <p>This is the language of change. And now you can read it.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM E8                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="epilogue" data-problem="e8">
+            <div class="problem-header">
+                <span class="problem-number">Problem E8 of 12</span>
+                <span class="problem-status" id="status-epilogue-e8">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What does the <strong>Mental Zoom</strong> show you about the world?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Think about seeing patterns everywhere.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-epilogue-e8" placeholder="The Mental Zoom shows that calculus is everywhere — in growth, cycles, change, and optimization." style="width:550px;">
+                <button onclick="checkPoliceProof('epilogue', 'e8', 'mental zoom calculus everywhere growth cycles change optimization patterns')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-epilogue-e8"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-epilogue-e8')">💡 Hint</button>
+                <div id="hint-epilogue-e8" style="display:none;">
+                    <p>When you zoom out, you see calculus in everything — motion, growth, cycles, and the best outcomes.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-epilogue-e8')">📝 Solution</button>
+                <div id="solution-epilogue-e8" style="display:none;">
+                    <p>The <strong>Mental Zoom</strong> shows you that <strong>calculus is everywhere</strong>:</p>
+                    <ul>
+                        <li>In <strong>motion</strong> (speed, acceleration)</li>
+                        <li>In <strong>growth</strong> (population, finance, technology)</li>
+                        <li>In <strong>cycles</strong> (heartbeats, seasons, waves)</li>
+                        <li>In <strong>optimization</strong> (finding the best route, price, or solution)</li>
+                    </ul>
+                    <p>Once you know calculus, you see the code of the universe everywhere.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM E9                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="epilogue" data-problem="e9">
+            <div class="problem-header">
+                <span class="problem-number">Problem E9 of 12</span>
+                <span class="problem-status" id="status-epilogue-e9">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What are the <strong>next steps</strong> after completing this book?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Practice, go deeper, apply, teach.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-epilogue-e9" placeholder="Practice with the workbook, go deeper with other resources, apply it, and teach others." style="width:550px;">
+                <button onclick="checkPoliceProof('epilogue', 'e9', 'practice workbook apply teach deeper resources continue learning')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-epilogue-e9"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-epilogue-e9')">💡 Hint</button>
+                <div id="hint-epilogue-e9" style="display:none;">
+                    <p>What are the four options mentioned in the book for continuing your calculus journey?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-epilogue-e9')">📝 Solution</button>
+                <div id="solution-epilogue-e9" style="display:none;">
+                    <p>After completing this book, you can:</p>
+                    <ol>
+                        <li><strong>Practice:</strong> Use the companion workbook for more problems.</li>
+                        <li><strong>Go deeper:</strong> Explore books like <em>Calculus Made Easy</em> or 3Blue1Brown's videos.</li>
+                        <li><strong>Apply it:</strong> Find calculus in the world around you and use it.</li>
+                        <li><strong>Teach it:</strong> Explain calculus to someone else — the best way to learn!</li>
+                    </ol>
+                    <p>The learning never ends!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM E10                                                   -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="epilogue" data-problem="e10">
+            <div class="problem-header">
+                <span class="problem-number">Problem E10 of 12</span>
+                <span class="problem-status" id="status-epilogue-e10">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> In one sentence, what is <strong>calculus</strong>?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Think about arithmetic and motion.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-epilogue-e10" placeholder="Calculus is arithmetic for things that move." style="width:400px;">
+                <button onclick="checkAnswer('epilogue', 'e10', 'Calculus is arithmetic for things that move.')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-epilogue-e10"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-epilogue-e10')">💡 Hint</button>
+                <div id="hint-epilogue-e10" style="display:none;">
+                    <p>This is the "Big Secret" from Chapter 1.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-epilogue-e10')">📝 Solution</button>
+                <div id="solution-epilogue-e10" style="display:none;">
+                    <p><strong>"Calculus is arithmetic for things that move."</strong></p>
+                    <p>This is the Big Secret — and now you understand exactly what it means!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM E11                                                   -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="epilogue" data-problem="e11">
+            <div class="problem-header">
+                <span class="problem-number">Problem E11 of 12</span>
+                <span class="problem-status" id="status-epilogue-e11">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Why does the <strong>horizon</strong> represent the beginning, not the end?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Think about the journey of learning.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-epilogue-e11" placeholder="The horizon represents the beginning because learning never ends — there is always more to discover." style="width:550px;">
+                <button onclick="checkPoliceProof('epilogue', 'e11', 'horizon beginning learning never ends discover continue journey')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-epilogue-e11"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-epilogue-e11')">💡 Hint</button>
+                <div id="hint-epilogue-e11" style="display:none;">
+                    <p>The horizon is where the known meets the unknown. It's the starting point for exploration.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-epilogue-e11')">📝 Solution</button>
+                <div id="solution-epilogue-e11" style="display:none;">
+                    <p>The <strong>horizon</strong> represents the <strong>beginning</strong>, not the end, because:</p>
+                    <ul>
+                        <li>Learning never ends — there is always more to discover.</li>
+                        <li>The horizon is where the known meets the unknown.</li>
+                        <li>You've learned the language of calculus — now you can use it to explore the world.</li>
+                    </ul>
+                    <p>Your journey with calculus is just beginning!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM E12                                                   -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="epilogue" data-problem="e12">
+            <div class="problem-header">
+                <span class="problem-number">Problem E12 of 12</span>
+                <span class="problem-status" id="status-epilogue-e12">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What is the <strong>final promise</strong> of this book?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Think about who can learn calculus.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-epilogue-e12" placeholder="You were always capable. Calculus is a language — and like any language, it can be learned." style="width:550px;">
+                <button onclick="checkAnswer('epilogue', 'e12', 'You were always capable. Calculus is a language — and like any language, it can be learned.')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-epilogue-e12"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-epilogue-e12')">💡 Hint</button>
+                <div id="hint-epilogue-e12" style="display:none;">
+                    <p>The final promise is about your capability to understand calculus.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-epilogue-e12')">📝 Solution</button>
+                <div id="solution-epilogue-e12" style="display:none;">
+                    <p>The <strong>final promise</strong> of this book:</p>
+                    <div style="background:#f4f0f8; border:2px solid #8e44ad; border-radius:4px; padding:16px 20px; margin:8px 0; text-align:center;">
+                        <p style="font-size:18px; font-weight:700; color:#2c3e50; margin:0;">
+                            "You were always capable. Calculus is a language — and like any language, it can be learned."
+                        </p>
+                    </div>
+                    <p>You've proven this promise true by completing this book!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- NAVIGATION                                                   -->
+        <!-- ============================================================ -->
+        <div class="navigation">
+            <a href="../chapters/chapter11.html" class="btn">← Previous Chapter</a>
+            <a href="../index.html" class="btn">🏠 Back to Dashboard</a>
+            <a href="police-proofs.html" class="btn">Police Proofs →</a>
+        </div>
+
+        <div style="text-align:center; margin:20px 0; font-size:13px; color:#aaa;">
+            <button onclick="resetAllProgress()" style="background:none; border:1px solid #ddd; border-radius:4px; padding:4px 12px; color:#999; cursor:pointer; font-size:12px;">
+                🔄 Reset All Progress
+            </button>
+        </div>
+
+        <div style="text-align:center; margin:20px 0; padding:20px; background:#f4f0f8; border-radius:8px; border:2px solid #8e44ad;">
+            <p style="font-size:18px; color:#2c3e50; margin:0; font-weight:700;">
+                🎉 Congratulations! You've Completed the Entire Workbook! 🎉
+            </p>
+            <p style="font-size:14px; color:#555; margin-top:8px;">
+                You've mastered the concepts from "The Calculus Code."<br>
+                Go to the dashboard to see your overall progress.
+            </p>
+            <div style="margin-top:12px;">
+                <a href="../index.html" class="btn" style="background:#8e44ad;">🏠 Go to Dashboard</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2026 TM BHinder · The Calculus Code</p>
+        <p class="small" style="font-size:12px; color:#bbb;">Progress saved in your browser's local storage</p>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../assets/js/progress.js"></script>
+    <script>
+        // Police Proof checker — checks for key concepts in the answer
+        function checkPoliceProof(chapter, problem, keyWords) {
+            let input = document.getElementById('answer-' + chapter + '-' + problem);
+            let feedback = document.getElementById('feedback-' + chapter + '-' + problem);
+            let status = document.getElementById('status-' + chapter + '-' + problem);
+
+            if (!input) return;
+
+            let userAnswer = input.value.trim().toLowerCase();
+            let keys = keyWords.toLowerCase().split(' ');
+
+            let foundCount = 0;
+            for (let k of keys) {
+                if (userAnswer.includes(k)) {
+                    foundCount++;
+                }
+            }
+
+            if (foundCount >= 3) {
+                feedback.innerHTML = '✅ Good explanation! Your answer shows understanding of the key concepts.';
+                feedback.className = 'feedback correct';
+                if (status) status.textContent = '✅';
+                Progress.markSolved(chapter, problem);
+            } else {
+                feedback.innerHTML = '❌ Your answer needs more detail. Try to include the key concepts: <strong>' + keyWords + '</strong>.';
+                feedback.className = 'feedback incorrect';
+            }
+        }
+    </script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

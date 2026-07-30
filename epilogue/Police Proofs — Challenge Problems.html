@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Proofs — Challenge Problems</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav>
+        <a href="../index.html">← Dashboard</a>
+        <span>|</span>
+        <span><strong>🏆 Police Proofs — Challenge Problems</strong></span>
+        <span style="margin-left:auto;" id="chapter-progress">Progress: 0/10</span>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+
+        <h1>🏆 Police Proofs — Challenge Problems</h1>
+        <p style="color:#555; font-size:15px; margin-bottom:20px;">
+            "These problems require reasoning and explanation — not just calculation.<br>
+            Prove you understand the calculus code."
+        </p>
+
+        <div style="background:#f4f0f8; border:2px solid #8e44ad; border-radius:4px; padding:12px 20px; margin-bottom:24px;">
+            <p style="font-size:14px; color:#555; margin:0; text-align:center;">
+                💡 A <strong>Police Proof</strong> is a challenge problem that requires reasoning and explanation, not just calculation.<br>
+                Write your answer as a complete explanation. Answers are checked against key words and concepts.
+            </p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM P1                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="police" data-problem="p1">
+            <div class="problem-header">
+                <span class="problem-number">Problem P1 of 10</span>
+                <span class="problem-status" id="status-police-p1">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Why is calculus called "arithmetic for things that move"? Explain using the concepts of <strong>derivative</strong> and <strong>integral</strong>.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Write a complete explanation.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Your explanation:</label>
+                <input type="text" id="answer-police-p1" placeholder="Calculus is called arithmetic for things that move because..." style="width:500px;">
+                <button onclick="checkPoliceProof('police', 'p1', 'derivative integral speed distance change movement')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-police-p1"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-police-p1')">💡 Hint</button>
+                <div id="hint-police-p1" style="display:none;">
+                    <p>Think about the speedometer and odometer. How do they relate to arithmetic operations?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-police-p1')">📝 Sample Solution</button>
+                <div id="solution-police-p1" style="display:none;">
+                    <p>Calculus is called "arithmetic for things that move" because it extends arithmetic to describe <strong>motion and change</strong>.</p>
+                    <ul>
+                        <li>The <strong>derivative</strong> (like a speedometer) tells you how fast something is changing <strong>right now</strong> — it's the arithmetic of <strong>instantaneous change</strong>.</li>
+                        <li>The <strong>integral</strong> (like an odometer) tells you the <strong>total accumulation</strong> — it's the arithmetic of <strong>adding up tiny changes</strong>.</li>
+                    </ul>
+                    <p>Just as arithmetic uses addition, subtraction, multiplication, and division, calculus uses these operations to describe <strong>change, motion, and accumulation</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM P2                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="police" data-problem="p2">
+            <div class="problem-header">
+                <span class="problem-number">Problem P2 of 10</span>
+                <span class="problem-status" id="status-police-p2">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Explain the <strong>0/0 paradox</strong> and how the <strong>limit</strong> trick solves it.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Write a complete explanation.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Your explanation:</label>
+                <input type="text" id="answer-police-p2" placeholder="The 0/0 paradox occurs when..." style="width:500px;">
+                <button onclick="checkPoliceProof('police', 'p2', '0/0 divide undefined approaches limit shrink interval')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-police-p2"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-police-p2')">💡 Hint</button>
+                <div id="hint-police-p2" style="display:none;">
+                    <p>Speed = Distance ÷ Time. What are the values at an instant? How do we get around dividing by zero?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-police-p2')">📝 Sample Solution</button>
+                <div id="solution-police-p2" style="display:none;">
+                    <p>The <strong>0/0 paradox</strong> occurs when calculating instant speed: at an instant, distance = 0 and time = 0, so speed = 0 ÷ 0, which is <strong>undefined</strong>.</p>
+                    <p>The <strong>limit</strong> trick solves this by <strong>zooming in</strong> on smaller and smaller time intervals. Instead of dividing 0 by 0, we look at what the average speed <strong>approaches</strong> as the interval shrinks to zero.</p>
+                    <p>This number — the limit — is the instant speed. We never divide by zero; we just look at the number the average speed is approaching.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM P3                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="police" data-problem="p3">
+            <div class="problem-header">
+                <span class="problem-number">Problem P3 of 10</span>
+                <span class="problem-status" id="status-police-p3">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Explain why <strong>slope</strong> and <strong>speed</strong> are the same concept. Use the ideas of <strong>rise over run</strong> and the <strong>Mental Zoom</strong>.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Write a complete explanation.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Your explanation:</label>
+                <input type="text" id="answer-police-p3" placeholder="Slope and speed are the same because..." style="width:500px;">
+                <button onclick="checkPoliceProof('police', 'p3', 'slope speed rise run change zoom derivative')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-police-p3"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-police-p3')">💡 Hint</button>
+                <div id="hint-police-p3" style="display:none;">
+                    <p>Both are "one thing divided by another." What do you divide in each case? How does the Mental Zoom connect them?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-police-p3')">📝 Sample Solution</button>
+                <div id="solution-police-p3" style="display:none;">
+                    <p><strong>Slope</strong> = Rise ÷ Run = change in y ÷ change in x.</p>
+                    <p><strong>Speed</strong> = Distance ÷ Time = change in distance ÷ change in time.</p>
+                    <p>Both are <strong>one change divided by another</strong> — they measure the <strong>rate of change</strong>.</p>
+                    <p>The <strong>Mental Zoom</strong> connects them: when you zoom in on a distance-time graph, the curve becomes a straight line. The slope of that line is the speed. So speed is just the slope of a distance-time graph!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM P4                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="police" data-problem="p4">
+            <div class="problem-header">
+                <span class="problem-number">Problem P4 of 10</span>
+                <span class="problem-status" id="status-police-p4">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> In your own words, explain the <strong>Power Rule</strong>. Why is it a "shortcut," and how does it relate to the zoom-in method?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Write a complete explanation.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Your explanation:</label>
+                <input type="text" id="answer-police-p4" placeholder="The Power Rule is a shortcut that..." style="width:500px;">
+                <button onclick="checkPoliceProof('police', 'p4', 'power rule shortcut exponent multiply subtract derivative')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-police-p4"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-police-p4')">💡 Hint</button>
+                <div id="hint-police-p4" style="display:none;">
+                    <p>What does the Power Rule do? How long does it take compared to the zoom-in method?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-police-p4')">📝 Sample Solution</button>
+                <div id="solution-police-p4" style="display:none;">
+                    <p>The <strong>Power Rule</strong> is a shortcut for finding derivatives: for $f(x) = x^n$, $f'(x) = n \times x^{n-1}$.</p>
+                    <p>It's a "shortcut" because it replaces the slow, labor-intensive <strong>zoom-in method</strong> (calculating slopes over shrinking intervals) with <strong>one step of multiplication and subtraction</strong>.</p>
+                    <p>The Power Rule gives the same result as the zoom-in method — it's just <strong>faster</strong>. It's a pattern that mathematicians discovered by seeing the pattern in the zoom-in method.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM P5                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="police" data-problem="p5">
+            <div class="problem-header">
+                <span class="problem-number">Problem P5 of 10</span>
+                <span class="problem-status" id="status-police-p5">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Explain the relationship between the <strong>derivative</strong> and the <strong>integral</strong>. Use the analogy of a <strong>speedometer</strong> and <strong>odometer</strong>.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Write a complete explanation.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Your explanation:</label>
+                <input type="text" id="answer-police-p5" placeholder="The derivative and integral are related because..." style="width:500px;">
+                <button onclick="checkPoliceProof('police', 'p5', 'derivative integral speedometer odometer opposite inverse undo')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-police-p5"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-police-p5')">💡 Hint</button>
+                <div id="hint-police-p5" style="display:none;">
+                    <p>Think about the speedometer and odometer in a car. What does each do? How are they connected?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-police-p5')">📝 Sample Solution</button>
+                <div id="solution-police-p5" style="display:none;">
+                    <p>The <strong>derivative</strong> and <strong>integral</strong> are <strong>opposites</strong> — they undo each other.</p>
+                    <ul>
+                        <li>The <strong>derivative</strong> is like a <strong>speedometer</strong> — it tells you how fast something is changing <strong>right now</strong>.</li>
+                        <li>The <strong>integral</strong> is like an <strong>odometer</strong> — it tells you the <strong>total accumulation</strong> over time.</li>
+                    </ul>
+                    <p>If you know the distance, the derivative gives you speed. If you know speed, the integral gives you distance. They are <strong>inverse operations</strong>, just like addition and subtraction.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM P6                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="police" data-problem="p6">
+            <div class="problem-header">
+                <span class="problem-number">Problem P6 of 10</span>
+                <span class="problem-status" id="status-police-p6">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Explain why $e^x$ is called the <strong>"super-function."</strong> What makes it special compared to other functions?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Write a complete explanation.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Your explanation:</label>
+                <input type="text" id="answer-police-p6" placeholder="e^x is called the super-function because..." style="width:500px;">
+                <button onclick="checkPoliceProof('police', 'p6', 'super function own derivative integral growth exponential e^x')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-police-p6"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-police-p6')">💡 Hint</button>
+                <div id="hint-police-p6" style="display:none;">
+                    <p>What is the derivative of $e^x$? What is the integral of $e^x$? No other function has this property.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-police-p6')">📝 Sample Solution</button>
+                <div id="solution-police-p6" style="display:none;">
+                    <p>$e^x$ is called the <strong>super-function</strong> because it is <strong>its own derivative</strong> AND <strong>its own integral</strong>.</p>
+                    <ul>
+                        <li>$\frac{d}{dx} e^x = e^x$</li>
+                        <li>$\int e^x \, dx = e^x + C$</li>
+                    </ul>
+                    <p>No other function has this property. It means $e^x$ <strong>never changes</strong> when you differentiate or integrate — it's the ultimate "self-similar" function.</p>
+                    <p>It also describes <strong>natural growth</strong> — where the rate of growth is proportional to the current amount.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM P7                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="police" data-problem="p7">
+            <div class="problem-header">
+                <span class="problem-number">Problem P7 of 10</span>
+                <span class="problem-status" id="status-police-p7">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Explain the <strong>derivative cycle</strong> for sine and cosine. Why does it take four steps to return to the start?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Write a complete explanation.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Your explanation:</label>
+                <input type="text" id="answer-police-p7" placeholder="The derivative cycle for sine and cosine is..." style="width:500px;">
+                <button onclick="checkPoliceProof('police', 'p7', 'sine cosine derivative cycle sin cos -sin -cos four steps')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-police-p7"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-police-p7')">💡 Hint</button>
+                <div id="hint-police-p7" style="display:none;">
+                    <p>What is the derivative of $\sin(x)$? What is the derivative of $\cos(x)$? Keep going until you return to $\sin(x)$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-police-p7')">📝 Sample Solution</button>
+                <div id="solution-police-p7" style="display:none;">
+                    <p>The <strong>derivative cycle</strong> for sine and cosine is:</p>
+                    <p style="font-size:18px; text-align:center; font-weight:700; color:#2c3e50;">
+                        $\sin(x) \to \cos(x) \to -\sin(x) \to -\cos(x) \to \sin(x)$
+                    </p>
+                    <p>It takes <strong>four steps</strong> to return to the start because each derivative changes the function, and it takes four changes to get back to the original.</p>
+                    <ul>
+                        <li>Step 1: $\sin \to \cos$</li>
+                        <li>Step 2: $\cos \to -\sin$</li>
+                        <li>Step 3: $-\sin \to -\cos$</li>
+                        <li>Step 4: $-\cos \to \sin$</li>
+                    </ul>
+                    <p>This cycle is the foundation of wave motion and alternating current.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM P8                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="police" data-problem="p8">
+            <div class="problem-header">
+                <span class="problem-number">Problem P8 of 10</span>
+                <span class="problem-status" id="status-police-p8">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Explain why the <strong>derivative is zero</strong> at both maximums and minimums. Use the hill and valley analogy.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Write a complete explanation.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Your explanation:</label>
+                <input type="text" id="answer-police-p8" placeholder="The derivative is zero at maximums and minimums because..." style="width:500px;">
+                <button onclick="checkPoliceProof('police', 'p8', 'derivative zero maximum minimum hill valley slope flat')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-police-p8"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-police-p8')">💡 Hint</button>
+                <div id="hint-police-p8" style="display:none;">
+                    <p>Think about walking up a hill and then down. What happens to the slope at the very top?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-police-p8')">📝 Sample Solution</button>
+                <div id="solution-police-p8" style="display:none;">
+                    <p>The derivative is zero at <strong>maximums</strong> and <strong>minimums</strong> because the curve is <strong>flat</strong> at those points.</p>
+                    <ul>
+                        <li>At a <strong>maximum</strong> (top of a hill): the slope changes from <strong>positive</strong> (going up) to <strong>negative</strong> (going down). At the peak, the slope is <strong>zero</strong>.</li>
+                        <li>At a <strong>minimum</strong> (bottom of a valley): the slope changes from <strong>negative</strong> (going down) to <strong>positive</strong> (going up). At the bottom, the slope is <strong>zero</strong>.</li>
+                    </ul>
+                    <p>This is why optimization works: find where the derivative is zero, and you've found a maximum or minimum.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM P9                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="police" data-problem="p9">
+            <div class="problem-header">
+                <span class="problem-number">Problem P9 of 10</span>
+                <span class="problem-status" id="status-police-p9">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Explain how the <strong>Mental Zoom</strong> connects <strong>slope</strong>, <strong>speed</strong>, <strong>area</strong>, and <strong>accumulation</strong>.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Write a complete explanation.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Your explanation:</label>
+                <input type="text" id="answer-police-p9" placeholder="The Mental Zoom connects these ideas by..." style="width:500px;">
+                <button onclick="checkPoliceProof('police', 'p9', 'mental zoom slope speed area accumulation zoom in zoom out rectangles tangent')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-police-p9"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-police-p9')">💡 Hint</button>
+                <div id="hint-police-p9" style="display:none;">
+                    <p>What happens when you zoom in on a curve? What happens when you zoom out and add more rectangles?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-police-p9')">📝 Sample Solution</button>
+                <div id="solution-police-p9" style="display:none;">
+                    <p>The <strong>Mental Zoom</strong> connects these ideas by showing how <strong>zooming in</strong> and <strong>zooming out</strong> reveal different aspects of calculus:</p>
+                    <ul>
+                        <li><strong>Slope</strong>: Zoom in on a curve → it becomes a straight line → the slope is the <strong>derivative</strong>.</li>
+                        <li><strong>Speed</strong>: Zoom in on a distance-time curve → the slope is the <strong>instant speed</strong>.</li>
+                        <li><strong>Area</strong>: Zoom out and add more rectangles → the rectangles become the curve → the area is the <strong>integral</strong>.</li>
+                        <li><strong>Accumulation</strong>: Zoom out and add up all the tiny slices → the total is the <strong>accumulation</strong>.</li>
+                    </ul>
+                    <p>The Mental Zoom is the <strong>unifying visual</strong> of calculus!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM P10                                                   -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="police" data-problem="p10">
+            <div class="problem-header">
+                <span class="problem-number">Problem P10 of 10</span>
+                <span class="problem-status" id="status-police-p10">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Why is the <strong>Fundamental Theorem of Calculus</strong> called the "Great Reversal"? Explain its importance in your own words.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Write a complete explanation.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Your explanation:</label>
+                <input type="text" id="answer-police-p10" placeholder="The Fundamental Theorem is called the Great Reversal because..." style="width:500px;">
+                <button onclick="checkPoliceProof('police', 'p10', 'fundamental theorem great reversal derivative integral inverse opposite undo slope area')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-police-p10"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-police-p10')">💡 Hint</button>
+                <div id="hint-police-p10" style="display:none;">
+                    <p>Before the theorem, slope (derivative) and area (integral) were seen as separate. What did the theorem reveal?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-police-p10')">📝 Sample Solution</button>
+                <div id="solution-police-p10" style="display:none;">
+                    <p>The <strong>Fundamental Theorem of Calculus</strong> is called the <strong>"Great Reversal"</strong> because it <strong>reversed</strong> how people thought about calculus.</p>
+                    <p>Before the theorem, <strong>slope</strong> (derivative) and <strong>area</strong> (integral) were seen as <strong>separate ideas</strong>. The theorem revealed that they are <strong>opposites</strong> — they <strong>undo each other</strong>.</p>
+                    <ul>
+                        <li>If you differentiate and then integrate, you get back where you started.</li>
+                        <li>If you integrate and then differentiate, you get back where you started.</li>
+                    </ul>
+                    <p>This unified two separate branches of calculus into <strong>one elegant theory</strong> — it's the single most important idea in calculus.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- NAVIGATION                                                   -->
+        <!-- ============================================================ -->
+        <div class="navigation">
+            <a href="../chapters/chapter11.html" class="btn">← Previous Chapter</a>
+            <a href="../index.html" class="btn">🏠 Back to Dashboard</a>
+            <a href="mixed-review.html" class="btn">Mixed Review →</a>
+        </div>
+
+        <div style="text-align:center; margin:20px 0; font-size:13px; color:#aaa;">
+            <button onclick="resetAllProgress()" style="background:none; border:1px solid #ddd; border-radius:4px; padding:4px 12px; color:#999; cursor:pointer; font-size:12px;">
+                🔄 Reset All Progress
+            </button>
+        </div>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2026 TM BHinder · The Calculus Code</p>
+        <p class="small" style="font-size:12px; color:#bbb;">Progress saved in your browser's local storage</p>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../assets/js/progress.js"></script>
+    <script>
+        // Police Proof checker — checks for key concepts in the answer
+        function checkPoliceProof(chapter, problem, keyWords) {
+            let input = document.getElementById('answer-' + chapter + '-' + problem);
+            let feedback = document.getElementById('feedback-' + chapter + '-' + problem);
+            let status = document.getElementById('status-' + chapter + '-' + problem);
+
+            if (!input) return;
+
+            let userAnswer = input.value.trim().toLowerCase();
+            let keys = keyWords.toLowerCase().split(' ');
+
+            let foundCount = 0;
+            for (let k of keys) {
+                if (userAnswer.includes(k)) {
+                    foundCount++;
+                }
+            }
+
+            if (foundCount >= 3) {
+                feedback.innerHTML = '✅ Good explanation! Your answer shows understanding of the key concepts.';
+                feedback.className = 'feedback correct';
+                if (status) status.textContent = '✅';
+                Progress.markSolved(chapter, problem);
+            } else {
+                feedback.innerHTML = '❌ Your answer needs more detail. Try to include the key concepts: <strong>' + keyWords + '</strong>.';
+                feedback.className = 'feedback incorrect';
+            }
+        }
+    </script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
