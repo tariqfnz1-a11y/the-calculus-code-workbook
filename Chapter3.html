@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3 — The Instant Speedometer</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav>
+        <a href="../index.html">← Dashboard</a>
+        <span>|</span>
+        <span><strong>Chapter 3: The Instant Speedometer</strong></span>
+        <span style="margin-left:auto;" id="chapter-progress">Progress: 0/10</span>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+
+        <h1>Chapter 3: The Instant Speedometer</h1>
+        <p style="color:#555; font-size:15px; margin-bottom:20px;">
+            "Solving the 0/0 Paradox — Finding speed at a frozen moment."
+        </p>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 1                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="3" data-problem="1">
+            <div class="problem-header">
+                <span class="problem-number">Problem 1 of 10</span>
+                <span class="problem-status" id="status-3-1">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What is the "0/0 problem" when calculating instant speed?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: At an instant, what are the values of distance and time?)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-3-1" placeholder="At an instant, distance = 0 and time = 0..." style="width:400px;">
+                <button onclick="checkAnswer('3', '1', 'At an instant, distance = 0 and time = 0, so 0 ÷ 0 is undefined.')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-3-1"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-3-1')">💡 Hint</button>
+                <div id="hint-3-1" style="display:none;">
+                    <p>Speed = Distance ÷ Time. At a single instant, what is the distance traveled? What is the time taken?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-3-1')">📝 Solution</button>
+                <div id="solution-3-1" style="display:none;">
+                    <p>At an exact instant, the <strong>distance</strong> traveled is <strong>0</strong> and the <strong>time</strong> taken is <strong>0</strong>.</p>
+                    <p>So instant speed = $0 \div 0$, which is <strong>undefined</strong> — it doesn't make sense mathematically.</p>
+                    <p>This is the <strong>0/0 paradox</strong> that calculus was invented to solve.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 2                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="3" data-problem="2">
+            <div class="problem-header">
+                <span class="problem-number">Problem 2 of 10</span>
+                <span class="problem-status" id="status-3-2">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> If a car travels 100 meters in 5 seconds, what is its <strong>average speed</strong>?</p>
+            </div>
+            <div class="answer-area">
+                <label>Average speed =</label>
+                <input type="text" id="answer-3-2" placeholder="20 m/s">
+                <button onclick="checkAnswer('3', '2', '20 m/s')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-3-2"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-3-2')">💡 Hint</button>
+                <div id="hint-3-2" style="display:none;">
+                    <p>Average speed = Total distance ÷ Total time.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-3-2')">📝 Solution</button>
+                <div id="solution-3-2" style="display:none;">
+                    <p>Average speed = 100 meters ÷ 5 seconds = <strong>20 m/s</strong></p>
+                    <p>This is the <strong>average</strong> speed over the whole 5-second interval.</p>
+                    <p>The instant speed at any single moment could be different.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 3                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="3" data-problem="3">
+            <div class="problem-header">
+                <span class="problem-number">Problem 3 of 10</span>
+                <span class="problem-status" id="status-3-3">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What is the <strong>limit</strong> trick in calculus used for?</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-3-3" placeholder="It is used to find what the average speed approaches..." style="width:400px;">
+                <button onclick="checkAnswer('3', '3', 'It is used to find what the average speed approaches as the time interval shrinks to zero.')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-3-3"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-3-3')">💡 Hint</button>
+                <div id="hint-3-3" style="display:none;">
+                    <p>When you can't calculate something directly (like $0 \div 0$), you look at smaller and smaller intervals and see what number the average is <strong>approaching</strong>.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-3-3')">📝 Solution</button>
+                <div id="solution-3-3" style="display:none;">
+                    <p>The <strong>limit</strong> trick is used to find the <strong>instant speed</strong> by looking at smaller and smaller time intervals.</p>
+                    <p>As the intervals get tiny, the average speed gets closer and closer to a specific number — that's the <strong>instant speed</strong>.</p>
+                    <p>We never divide by zero. We just look at what the speed is <em>approaching</em>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 4                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="3" data-problem="4">
+            <div class="problem-header">
+                <span class="problem-number">Problem 4 of 10</span>
+                <span class="problem-status" id="status-3-4">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> When you zoom in on a curve, what does it look like?</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-3-4" placeholder="It looks like a straight line." style="width:300px;">
+                <button onclick="checkAnswer('3', '4', 'It looks like a straight line.')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-3-4"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-3-4')">💡 Hint</button>
+                <div id="hint-3-4" style="display:none;">
+                    <p>Think about the <strong>Mental Zoom</strong> from Chapter 1. What happens when you zoom in far enough?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-3-4')">📝 Solution</button>
+                <div id="solution-3-4" style="display:none;">
+                    <p>When you zoom in far enough on any smooth curve, it looks like a <strong>straight line</strong>.</p>
+                    <p>The <strong>slope</strong> of that straight line is the <strong>derivative</strong> (the instant speed).</p>
+                    <p>This is the <strong>Mental Zoom</strong> principle.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 5                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="3" data-problem="5">
+            <div class="problem-header">
+                <span class="problem-number">Problem 5 of 10</span>
+                <span class="problem-status" id="status-3-5">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> For the function $d = t^2$, what is the <strong>derivative</strong> (the instant speed formula)?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: From the chapter, the pattern is: speed = 2 × t)</p>
+            </div>
+            <div class="answer-area">
+                <label>$d/dt (t^2) =$</label>
+                <input type="text" id="answer-3-5" placeholder="2t">
+                <button onclick="checkAnswer('3', '5', '2t')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-3-5"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-3-5')">💡 Hint</button>
+                <div id="hint-3-5" style="display:none;">
+                    <p>In Chapter 3, we found that for $d = t^2$, the instant speed is $2t$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-3-5')">📝 Solution</button>
+                <div id="solution-3-5" style="display:none;">
+                    <p>For $d = t^2$, the derivative (instant speed) is:</p>
+                    <p>$$ \frac{d}{dt}(t^2) = 2t $$</p>
+                    <p>This means: at any time $t$, the instant speed is $2 \times t$.</p>
+                    <p>At $t = 2$, speed = 4 m/s. At $t = 3$, speed = 6 m/s.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 6                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="3" data-problem="6">
+            <div class="problem-header">
+                <span class="problem-number">Problem 6 of 10</span>
+                <span class="problem-status" id="status-3-6">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> For $d = t^2$, what is the <strong>instant speed</strong> at $t = 3$ seconds?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Use the pattern: speed = $2t$)</p>
+            </div>
+            <div class="answer-area">
+                <label>Speed at t = 3 =</label>
+                <input type="text" id="answer-3-6" placeholder="6 m/s">
+                <button onclick="checkAnswer('3', '6', '6 m/s')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-3-6"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-3-6')">💡 Hint</button>
+                <div id="hint-3-6" style="display:none;">
+                    <p>Speed = $2 \times t$. Plug in $t = 3$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-3-6')">📝 Solution</button>
+                <div id="solution-3-6" style="display:none;">
+                    <p>Speed = $2 \times t$</p>
+                    <p>At $t = 3$: Speed = $2 \times 3 = <strong>6 m/s</strong>$</p>
+                    <p>At exactly 3 seconds, the car is going 6 m/s.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 7                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="3" data-problem="7">
+            <div class="problem-header">
+                <span class="problem-number">Problem 7 of 10</span>
+                <span class="problem-status" id="status-3-7">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Why can't we just calculate instant speed directly by dividing distance by time?</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-3-7" placeholder="Because at an instant, both distance and time are zero..." style="width:400px;">
+                <button onclick="checkAnswer('3', '7', 'Because at an instant, distance = 0 and time = 0, so dividing gives 0 ÷ 0 which is undefined.')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-3-7"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-3-7')">💡 Hint</button>
+                <div id="hint-3-7" style="display:none;">
+                    <p>Speed = Distance ÷ Time. What happens at an instant?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-3-7')">📝 Solution</button>
+                <div id="solution-3-7" style="display:none;">
+                    <p>At an exact instant, the <strong>distance</strong> is <strong>0</strong> and the <strong>time</strong> is <strong>0</strong>.</p>
+                    <p>So instant speed = $0 \div 0$, which is <strong>undefined</strong>.</p>
+                    <p>This is why we use the <strong>limit</strong> trick instead — we look at what the average speed approaches as the time interval shrinks to zero.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 8                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="3" data-problem="8">
+            <div class="problem-header">
+                <span class="problem-number">Problem 8 of 10</span>
+                <span class="problem-status" id="status-3-8">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What is the formula for <strong>average speed</strong>?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: It's the total change in distance divided by the total change in time.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Average speed =</label>
+                <input type="text" id="answer-3-8" placeholder="Distance traveled ÷ Time taken" style="width:300px;">
+                <button onclick="checkAnswer('3', '8', 'Distance traveled ÷ Time taken')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-3-8"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-3-8')">💡 Hint</button>
+                <div id="hint-3-8" style="display:none;">
+                    <p>Average speed = (change in distance) ÷ (change in time). In symbols: $\Delta d \div \Delta t$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-3-8')">📝 Solution</button>
+                <div id="solution-3-8" style="display:none;">
+                    <p><strong>Average speed = Distance traveled ÷ Time taken</strong></p>
+                    <p>In symbols: <strong>Average speed = $\Delta d \div \Delta t$</strong></p>
+                    <p>Where $\Delta d$ is the change in distance and $\Delta t$ is the change in time.</p>
+                    <p>This gives the <strong>average</strong> speed over an interval.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 9                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="3" data-problem="9">
+            <div class="problem-header">
+                <span class="problem-number">Problem 9 of 10</span>
+                <span class="problem-status" id="status-3-9">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What does the <strong>derivative</strong> measure in calculus?</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-3-9" placeholder="The derivative measures the instant speed..." style="width:350px;">
+                <button onclick="checkAnswer('3', '9', 'The derivative measures the instant speed (the rate of change at a single moment).')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-3-9"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-3-9')">💡 Hint</button>
+                <div id="hint-3-9" style="display:none;">
+                    <p>Think about the speedometer analogy. What does the derivative tell you?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-3-9')">📝 Solution</button>
+                <div id="solution-3-9" style="display:none;">
+                    <p>The <strong>derivative</strong> measures the <strong>instant speed</strong> — the rate of change at a single moment.</p>
+                    <p>It's the slope of the curve after zooming in infinitely.</p>
+                    <p>In other words: "How fast is it changing <strong>right now</strong>?"</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 10                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="3" data-problem="10">
+            <div class="problem-header">
+                <span class="problem-number">Problem 10 of 10</span>
+                <span class="problem-status" id="status-3-10">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> The table below shows average speeds over shrinking intervals for $d = t^2$ at $t = 2$.</p>
+                <div style="background:#faf8f5; border:1px solid #ddd; border-radius:4px; padding:12px; margin:8px 0; display:inline-block;">
+                    <table style="width:auto; margin:0; font-size:14px;">
+                        <thead><tr><th>Interval</th><th>Average Speed</th></tr></thead>
+                        <tbody>
+                            <tr><td>1 to 3</td><td>4 m/s</td></tr>
+                            <tr><td>1.5 to 2.5</td><td>4 m/s</td></tr>
+                            <tr><td>1.9 to 2.1</td><td>4 m/s</td></tr>
+                            <tr><td>1.99 to 2.01</td><td>___</td></tr>
+                            <tr><td>1.999 to 2.001</td><td>___</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size:14px; color:#888; margin-top:4px;">What values go in the blanks? (Enter as: 4 m/s, 4 m/s)</p>
+            </div>
+            <div class="answer-area">
+                <label>Missing values:</label>
+                <input type="text" id="answer-3-10" placeholder="4 m/s, 4 m/s" style="width:200px;">
+                <button onclick="checkAnswer('3', '10', '4 m/s, 4 m/s')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-3-10"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-3-10')">💡 Hint</button>
+                <div id="hint-3-10" style="display:none;">
+                    <p>Look at the pattern in the table. As the interval shrinks, what number is the average speed approaching?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-3-10')">📝 Solution</button>
+                <div id="solution-3-10" style="display:none;">
+                    <p>As the intervals get smaller and smaller, the average speed stays at <strong>4 m/s</strong>.</p>
+                    <p>The missing values are: <strong>4 m/s, 4 m/s</strong></p>
+                    <p>This shows that the instant speed at $t = 2$ is <strong>4 m/s</strong>.</p>
+                    <p>The limit is 4 m/s — that's the derivative at $t = 2$.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- NAVIGATION                                                   -->
+        <!-- ============================================================ -->
+        <div class="navigation">
+            <a href="chapter2.html" class="btn">← Previous Chapter</a>
+            <a href="../index.html" class="btn">🏠 Back to Dashboard</a>
+            <a href="chapter4.html" class="btn">Next Chapter →</a>
+        </div>
+
+        <div style="text-align:center; margin:20px 0; font-size:13px; color:#aaa;">
+            <button onclick="resetAllProgress()" style="background:none; border:1px solid #ddd; border-radius:4px; padding:4px 12px; color:#999; cursor:pointer; font-size:12px;">
+                🔄 Reset All Progress
+            </button>
+        </div>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2026 TM BHinder · The Calculus Code</p>
+        <p class="small" style="font-size:12px; color:#bbb;">Progress saved in your browser's local storage</p>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../assets/js/progress.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 10 — The Circle Logic</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav>
+        <a href="../index.html">← Dashboard</a>
+        <span>|</span>
+        <span><strong>Chapter 10: The Circle Logic</strong></span>
+        <span style="margin-left:auto;" id="chapter-progress">Progress: 0/10</span>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+
+        <h1>Chapter 10: The Circle Logic — Sines and Cosines</h1>
+        <p style="color:#555; font-size:15px; margin-bottom:20px;">
+            "Sine and cosine are the height and width of a point moving around a circle — the language of repetition."
+        </p>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 1                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="10" data-problem="1">
+            <div class="problem-header">
+                <span class="problem-number">Problem 1 of 10</span>
+                <span class="problem-status" id="status-10-1">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What do <strong>sine</strong> and <strong>cosine</strong> measure on a unit circle?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: One measures height, the other measures width.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-10-1" placeholder="Sine measures height, cosine measures width." style="width:400px;">
+                <button onclick="checkAnswer('10', '1', 'Sine measures height, cosine measures width.')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-10-1"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-10-1')">💡 Hint</button>
+                <div id="hint-10-1" style="display:none;">
+                    <p>Think about a point moving around a circle. One coordinate is the height (vertical), the other is the width (horizontal).</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-10-1')">📝 Solution</button>
+                <div id="solution-10-1" style="display:none;">
+                    <p>On a unit circle:</p>
+                    <ul>
+                        <li><strong>Sine</strong> measures the <strong>height</strong> (vertical position) of a point.</li>
+                        <li><strong>Cosine</strong> measures the <strong>width</strong> (horizontal position) of a point.</li>
+                    </ul>
+                    <p>At angle $\theta$: the point is at $(\cos \theta, \sin \theta)$.</p>
+                    <p><strong>Answer: Sine measures height, cosine measures width.</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 2                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="10" data-problem="2">
+            <div class="problem-header">
+                <span class="problem-number">Problem 2 of 10</span>
+                <span class="problem-status" id="status-10-2">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What is the value of $\sin(0^\circ)$ and $\cos(0^\circ)$?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: At 0°, the point is at the rightmost edge of the circle.)</p>
+            </div>
+            <div class="answer-area">
+                <label>$\sin(0^\circ) =$</label>
+                <input type="text" id="answer-10-2a" placeholder="0" style="width:60px;">
+                <span style="margin:0 8px;">,</span>
+                <label>$\cos(0^\circ) =$</label>
+                <input type="text" id="answer-10-2b" placeholder="1" style="width:60px;">
+                <button onclick="checkTwoPartAnswer('10', '2', '0', '1')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-10-2"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-10-2')">💡 Hint</button>
+                <div id="hint-10-2" style="display:none;">
+                    <p>At 0°, the point is at (1, 0). So the width (cosine) is 1 and the height (sine) is 0.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-10-2')">📝 Solution</button>
+                <div id="solution-10-2" style="display:none;">
+                    <p>At $0^\circ$, the point is at the <strong>rightmost edge</strong> of the circle: $(1, 0)$.</p>
+                    <p>$\sin(0^\circ) = <strong>0</strong>$</p>
+                    <p>$\cos(0^\circ) = <strong>1</strong>$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 3                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="10" data-problem="3">
+            <div class="problem-header">
+                <span class="problem-number">Problem 3 of 10</span>
+                <span class="problem-status" id="status-10-3">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What is the value of $\sin(90^\circ)$ and $\cos(90^\circ)$?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: At 90°, the point is at the top of the circle.)</p>
+            </div>
+            <div class="answer-area">
+                <label>$\sin(90^\circ) =$</label>
+                <input type="text" id="answer-10-3a" placeholder="1" style="width:60px;">
+                <span style="margin:0 8px;">,</span>
+                <label>$\cos(90^\circ) =$</label>
+                <input type="text" id="answer-10-3b" placeholder="0" style="width:60px;">
+                <button onclick="checkTwoPartAnswer('10', '3', '1', '0')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-10-3"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-10-3')">💡 Hint</button>
+                <div id="hint-10-3" style="display:none;">
+                    <p>At 90°, the point is at (0, 1). So the width (cosine) is 0 and the height (sine) is 1.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-10-3')">📝 Solution</button>
+                <div id="solution-10-3" style="display:none;">
+                    <p>At $90^\circ$, the point is at the <strong>top</strong> of the circle: $(0, 1)$.</p>
+                    <p>$\sin(90^\circ) = <strong>1</strong>$</p>
+                    <p>$\cos(90^\circ) = <strong>0</strong>$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 4                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="10" data-problem="4">
+            <div class="problem-header">
+                <span class="problem-number">Problem 4 of 10</span>
+                <span class="problem-status" id="status-10-4">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What is the <strong>derivative</strong> of $\sin(x)$?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: The derivative of sine is cosine.)</p>
+            </div>
+            <div class="answer-area">
+                <label>$\frac{d}{dx} \sin(x) =$</label>
+                <input type="text" id="answer-10-4" placeholder="cos(x)">
+                <button onclick="checkAnswer('10', '4', 'cos(x)')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-10-4"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-10-4')">💡 Hint</button>
+                <div id="hint-10-4" style="display:none;">
+                    <p>The derivative of $\sin(x)$ is $\cos(x)$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-10-4')">📝 Solution</button>
+                <div id="solution-10-4" style="display:none;">
+                    <p>$\frac{d}{dx} \sin(x) = <strong>\cos(x)</strong>$</p>
+                    <p><strong>Answer: $\cos(x)$</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 5                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="10" data-problem="5">
+            <div class="problem-header">
+                <span class="problem-number">Problem 5 of 10</span>
+                <span class="problem-status" id="status-10-5">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What is the <strong>derivative</strong> of $\cos(x)$?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: The derivative of cosine is negative sine.)</p>
+            </div>
+            <div class="answer-area">
+                <label>$\frac{d}{dx} \cos(x) =$</label>
+                <input type="text" id="answer-10-5" placeholder="-sin(x)">
+                <button onclick="checkAnswer('10', '5', '-sin(x)')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-10-5"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-10-5')">💡 Hint</button>
+                <div id="hint-10-5" style="display:none;">
+                    <p>The derivative of $\cos(x)$ is $-\sin(x)$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-10-5')">📝 Solution</button>
+                <div id="solution-10-5" style="display:none;">
+                    <p>$\frac{d}{dx} \cos(x) = <strong>-\sin(x)$</strong></p>
+                    <p><strong>Answer: $-\sin(x)$</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 6                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="10" data-problem="6">
+            <div class="problem-header">
+                <span class="problem-number">Problem 6 of 10</span>
+                <span class="problem-status" id="status-10-6">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What is the <strong>derivative cycle</strong> for sine and cosine?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: $\sin \to \cos \to -\sin \to -\cos \to \sin$)</p>
+            </div>
+            <div class="answer-area">
+                <label>Cycle:</label>
+                <input type="text" id="answer-10-6" placeholder="sin → cos → -sin → -cos → sin" style="width:350px;">
+                <button onclick="checkAnswer('10', '6', 'sin → cos → -sin → -cos → sin')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-10-6"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-10-6')">💡 Hint</button>
+                <div id="hint-10-6" style="display:none;">
+                    <p>The derivative of $\sin$ is $\cos$. The derivative of $\cos$ is $-\sin$. The derivative of $-\sin$ is $-\cos$. The derivative of $-\cos$ is $\sin$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-10-6')">📝 Solution</button>
+                <div id="solution-10-6" style="display:none;">
+                    <p>The <strong>derivative cycle</strong> is:</p>
+                    <p style="font-size:20px; text-align:center; font-weight:700; color:#2c3e50;">
+                        $\sin(x) \to \cos(x) \to -\sin(x) \to -\cos(x) \to \sin(x)$
+                    </p>
+                    <p>It takes <strong>four steps</strong> to return to the start.</p>
+                    <p><strong>Answer: $\sin \to \cos \to -\sin \to -\cos \to \sin$</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 7                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="10" data-problem="7">
+            <div class="problem-header">
+                <span class="problem-number">Problem 7 of 10</span>
+                <span class="problem-status" id="status-10-7">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Find the derivative of $f(x) = \sin(2x)$.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Use the Chain Rule: derivative of $\sin(kx)$ is $k\cos(kx)$.)</p>
+            </div>
+            <div class="answer-area">
+                <label>$f'(x) =$</label>
+                <input type="text" id="answer-10-7" placeholder="2cos(2x)">
+                <button onclick="checkAnswer('10', '7', '2cos(2x)')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-10-7"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-10-7')">💡 Hint</button>
+                <div id="hint-10-7" style="display:none;">
+                    <p>For $\sin(kx)$, the derivative is $k\cos(kx)$. Here $k = 2$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-10-7')">📝 Solution</button>
+                <div id="solution-10-7" style="display:none;">
+                    <p>$f(x) = \sin(2x)$</p>
+                    <p>$f'(x) = 2 \times \cos(2x) = <strong>2\cos(2x)$</strong></p>
+                    <p><strong>Answer: $2\cos(2x)$</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 8                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="10" data-problem="8">
+            <div class="problem-header">
+                <span class="problem-number">Problem 8 of 10</span>
+                <span class="problem-status" id="status-10-8">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Find the derivative of $f(x) = \cos(3x)$.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: derivative of $\cos(kx)$ is $-k\sin(kx)$.)</p>
+            </div>
+            <div class="answer-area">
+                <label>$f'(x) =$</label>
+                <input type="text" id="answer-10-8" placeholder="-3sin(3x)">
+                <button onclick="checkAnswer('10', '8', '-3sin(3x)')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-10-8"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-10-8')">💡 Hint</button>
+                <div id="hint-10-8" style="display:none;">
+                    <p>For $\cos(kx)$, the derivative is $-k\sin(kx)$. Here $k = 3$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-10-8')">📝 Solution</button>
+                <div id="solution-10-8" style="display:none;">
+                    <p>$f(x) = \cos(3x)$</p>
+                    <p>$f'(x) = -3 \times \sin(3x) = <strong>-3\sin(3x)$</strong></p>
+                    <p><strong>Answer: $-3\sin(3x)$</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 9                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="10" data-problem="9">
+            <div class="problem-header">
+                <span class="problem-number">Problem 9 of 10</span>
+                <span class="problem-status" id="status-10-9">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Find the integral of $\cos(x)$.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: The integral of cosine is sine.)</p>
+            </div>
+            <div class="answer-area">
+                <label>$\int \cos(x) \, dx =$</label>
+                <input type="text" id="answer-10-9" placeholder="sin(x) + C">
+                <button onclick="checkAnswer('10', '9', 'sin(x) + C')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-10-9"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-10-9')">💡 Hint</button>
+                <div id="hint-10-9" style="display:none;">
+                    <p>The integral of $\cos(x)$ is $\sin(x) + C$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-10-9')">📝 Solution</button>
+                <div id="solution-10-9" style="display:none;">
+                    <p>$\int \cos(x) \, dx = <strong>\sin(x) + C$</strong></p>
+                    <p>Check: The derivative of $\sin(x) + C$ is $\cos(x)$. ✓</p>
+                    <p><strong>Answer: $\sin(x) + C$</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 10                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="10" data-problem="10">
+            <div class="problem-header">
+                <span class="problem-number">Problem 10 of 10</span>
+                <span class="problem-status" id="status-10-10">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Why do sine and cosine repeat every $360^\circ$?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Think about going around a circle.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-10-10" placeholder="Because they describe motion around a circle — after 360° (one full circle), you're back where you started." style="width:550px;">
+                <button onclick="checkAnswer('10', '10', 'Because they describe motion around a circle — after 360° (one full circle), you are back where you started.')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-10-10"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-10-10')">💡 Hint</button>
+                <div id="hint-10-10" style="display:none;">
+                    <p>After one full rotation around a circle, you're back at the starting point. The height and width repeat.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-10-10')">📝 Solution</button>
+                <div id="solution-10-10" style="display:none;">
+                    <p>Sine and cosine repeat every $360^\circ$ because they describe the height and width of a point moving around a <strong>circle</strong>.</p>
+                    <p>After $360^\circ$ (one full circle), the point is back at the starting position.</p>
+                    <p>So the height (sine) and width (cosine) are the same as at $0^\circ$.</p>
+                    <p><strong>Answer: Because they describe motion around a circle — after 360° (one full circle), you are back where you started.</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- NAVIGATION                                                   -->
+        <!-- ============================================================ -->
+        <div class="navigation">
+            <a href="chapter9.html" class="btn">← Previous Chapter</a>
+            <a href="../index.html" class="btn">🏠 Back to Dashboard</a>
+            <a href="chapter11.html" class="btn">Next Chapter →</a>
+        </div>
+
+        <div style="text-align:center; margin:20px 0; font-size:13px; color:#aaa;">
+            <button onclick="resetAllProgress()" style="background:none; border:1px solid #ddd; border-radius:4px; padding:4px 12px; color:#999; cursor:pointer; font-size:12px;">
+                🔄 Reset All Progress
+            </button>
+        </div>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2026 TM BHinder · The Calculus Code</p>
+        <p class="small" style="font-size:12px; color:#bbb;">Progress saved in your browser's local storage</p>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../assets/js/progress.js"></script>
+    <script>
+        // Two-part answer checker for Problems 2 and 3
+        function checkTwoPartAnswer(chapter, problem, answer1, answer2) {
+            let input1 = document.getElementById('answer-' + chapter + '-' + problem + 'a');
+            let input2 = document.getElementById('answer-' + chapter + '-' + problem + 'b');
+            let feedback = document.getElementById('feedback-' + chapter + '-' + problem);
+            let status = document.getElementById('status-' + chapter + '-' + problem);
+
+            if (!input1 || !input2) return;
+
+            let user1 = input1.value.trim().replace(/\s/g, '');
+            let user2 = input2.value.trim().replace(/\s/g, '');
+            let expected1 = answer1.replace(/\s/g, '');
+            let expected2 = answer2.replace(/\s/g, '');
+
+            if (user1 === expected1 && user2 === expected2) {
+                feedback.innerHTML = '✅ Correct! Well done!';
+                feedback.className = 'feedback correct';
+                if (status) status.textContent = '✅';
+                Progress.markSolved(chapter, problem);
+            } else {
+                feedback.innerHTML = '❌ Not quite. Try again, or use the hint.';
+                feedback.className = 'feedback incorrect';
+            }
+        }
+    </script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

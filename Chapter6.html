@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6 — The Odometer Trick</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav>
+        <a href="../index.html">← Dashboard</a>
+        <span>|</span>
+        <span><strong>Chapter 6: The Odometer Trick</strong></span>
+        <span style="margin-left:auto;" id="chapter-progress">Progress: 0/10</span>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+
+        <h1>Chapter 6: The Odometer Trick</h1>
+        <p style="color:#555; font-size:15px; margin-bottom:20px;">
+            "Accumulation — Adding up tiny slices to find total distance."
+        </p>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 1                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="6" data-problem="1">
+            <div class="problem-header">
+                <span class="problem-number">Problem 1 of 10</span>
+                <span class="problem-status" id="status-6-1">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What is the <strong>integral</strong> in calculus?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Think about an odometer.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-6-1" placeholder="The integral is the total accumulation..." style="width:400px;">
+                <button onclick="checkAnswer('6', '1', 'The integral is the total accumulation — adding up all the tiny changes to get the big total.')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-6-1"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-6-1')">💡 Hint</button>
+                <div id="hint-6-1" style="display:none;">
+                    <p>The integral is like an odometer — it tells you the total amount accumulated over time.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-6-1')">📝 Solution</button>
+                <div id="solution-6-1" style="display:none;">
+                    <p>The <strong>integral</strong> is the <strong>total accumulation</strong> — adding up all the tiny changes to get the big total.</p>
+                    <p>Think of it like an odometer that adds up every tiny rotation of your wheels to give total distance.</p>
+                    <p>It answers the question: <strong>"How much total change happened?"</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 2                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="6" data-problem="2">
+            <div class="problem-header">
+                <span class="problem-number">Problem 2 of 10</span>
+                <span class="problem-status" id="status-6-2">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> A car drives at 50 mph for 2 hours and then 70 mph for 1 hour. What is the total distance?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Distance = Speed × Time for each part, then add.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Total distance =</label>
+                <input type="text" id="answer-6-2" placeholder="170 miles">
+                <button onclick="checkAnswer('6', '2', '170 miles')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-6-2"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-6-2')">💡 Hint</button>
+                <div id="hint-6-2" style="display:none;">
+                    <p>First part: 50 mph × 2 hours = 100 miles.</p>
+                    <p>Second part: 70 mph × 1 hour = 70 miles.</p>
+                    <p>Add them together.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-6-2')">📝 Solution</button>
+                <div id="solution-6-2" style="display:none;">
+                    <p>First part: 50 mph × 2 hours = <strong>100 miles</strong></p>
+                    <p>Second part: 70 mph × 1 hour = <strong>70 miles</strong></p>
+                    <p>Total distance = 100 + 70 = <strong>170 miles</strong></p>
+                    <p><strong>Answer: 170 miles</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 3                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="6" data-problem="3">
+            <div class="problem-header">
+                <span class="problem-number">Problem 3 of 10</span>
+                <span class="problem-status" id="status-6-3">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What does the <strong>area under a speed curve</strong> represent?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Think about the odometer.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-6-3" placeholder="The area under a speed curve represents total distance." style="width:400px;">
+                <button onclick="checkAnswer('6', '3', 'The area under a speed curve represents total distance.')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-6-3"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-6-3')">💡 Hint</button>
+                <div id="hint-6-3" style="display:none;">
+                    <p>Speed is the height of the curve. Time is the width. Area = height × width = speed × time = distance.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-6-3')">📝 Solution</button>
+                <div id="solution-6-3" style="display:none;">
+                    <p>The <strong>area under a speed curve</strong> represents <strong>total distance</strong>.</p>
+                    <p>Speed × Time = Distance.</p>
+                    <p>When speed is changing, you add up all the tiny rectangles (speed × tiny time) to get the total area = total distance.</p>
+                    <p><strong>Answer: Total distance</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 4                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="6" data-problem="4">
+            <div class="problem-header">
+                <span class="problem-number">Problem 4 of 10</span>
+                <span class="problem-status" id="status-6-4">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> A car's speed over time is shown in the table below. Estimate the total distance using 1-hour intervals.</p>
+                <div style="background:#faf8f5; border:1px solid #ddd; border-radius:4px; padding:12px; margin:8px 0; display:inline-block;">
+                    <table style="width:auto; margin:0; font-size:14px;">
+                        <thead><tr><th>Time (hours)</th><th>Speed (mph)</th></tr></thead>
+                        <tbody>
+                            <tr><td>0 to 1</td><td>50</td></tr>
+                            <tr><td>1 to 2</td><td>60</td></tr>
+                            <tr><td>2 to 3</td><td>70</td></tr>
+                            <tr><td>3 to 4</td><td>40</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Distance = Speed × Time for each interval, then add.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Total distance =</label>
+                <input type="text" id="answer-6-4" placeholder="220 miles">
+                <button onclick="checkAnswer('6', '4', '220 miles')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-6-4"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-6-4')">💡 Hint</button>
+                <div id="hint-6-4" style="display:none;">
+                    <p>Each interval is 1 hour long, so distance = speed × 1 for each row.</p>
+                    <p>Then add all four distances together.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-6-4')">📝 Solution</button>
+                <div id="solution-6-4" style="display:none;">
+                    <p>0 to 1 hour: 50 × 1 = <strong>50 miles</strong></p>
+                    <p>1 to 2 hours: 60 × 1 = <strong>60 miles</strong></p>
+                    <p>2 to 3 hours: 70 × 1 = <strong>70 miles</strong></p>
+                    <p>3 to 4 hours: 40 × 1 = <strong>40 miles</strong></p>
+                    <p>Total = 50 + 60 + 70 + 40 = <strong>220 miles</strong></p>
+                    <p><strong>Answer: 220 miles</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 5                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="6" data-problem="5">
+            <div class="problem-header">
+                <span class="problem-number">Problem 5 of 10</span>
+                <span class="problem-status" id="status-6-5">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What is the <strong>integral symbol</strong> and what does it mean?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: It looks like an elongated S.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-6-5" placeholder="The integral symbol is ∫ and it means 'sum up' or 'accumulate'." style="width:450px;">
+                <button onclick="checkAnswer('6', '5', 'The integral symbol is ∫ and it means sum up or accumulate.')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-6-5"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-6-5')">💡 Hint</button>
+                <div id="hint-6-5" style="display:none;">
+                    <p>The symbol looks like an elongated 'S'. It stands for "sum" or "accumulate".</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-6-5')">📝 Solution</button>
+                <div id="solution-6-5" style="display:none;">
+                    <p>The <strong>integral symbol</strong> is <strong>$∫$</strong>.</p>
+                    <p>It means <strong>"sum up"</strong> or <strong>"accumulate"</strong>.</p>
+                    <p>It comes from the letter S, which stands for "sum".</p>
+                    <p>When you see $∫ f(x) dx$, it means: <strong>"Add up all the values of $f(x)$ times tiny pieces of $x$."</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 6                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="6" data-problem="6">
+            <div class="problem-header">
+                <span class="problem-number">Problem 6 of 10</span>
+                <span class="problem-status" id="status-6-6">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> If you divide the area under a curve into <strong>4 rectangles</strong> instead of 1, does the estimate get better or worse?</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-6-6" placeholder="Better">
+                <button onclick="checkAnswer('6', '6', 'Better')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-6-6"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-6-6')">💡 Hint</button>
+                <div id="hint-6-6" style="display:none;">
+                    <p>Think about more rectangles fitting the curve more closely.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-6-6')">📝 Solution</button>
+                <div id="solution-6-6" style="display:none;">
+                    <p>Using <strong>more rectangles</strong> gives a <strong>better estimate</strong>.</p>
+                    <p>The rectangles fit the curve more closely, leaving less empty space between the rectangles and the curve.</p>
+                    <p>As the number of rectangles increases, the estimate gets closer to the exact area (the integral).</p>
+                    <p><strong>Answer: Better</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 7                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="6" data-problem="7">
+            <div class="problem-header">
+                <span class="problem-number">Problem 7 of 10</span>
+                <span class="problem-status" id="status-6-7">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Estimate the area under $y = x$ from $x = 0$ to $x = 4$ using <strong>4 rectangles</strong> (width = 1).</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Use the left-hand sum. Each rectangle's height is $y = x$ at the left edge.)</p>
+                <div style="background:#faf8f5; border:1px solid #ddd; border-radius:4px; padding:12px; margin:8px 0; display:inline-block;">
+                    <table style="width:auto; margin:0; font-size:13px;">
+                        <thead><tr><th>Interval</th><th>Left Edge</th><th>Height ($y = x$)</th><th>Width</th><th>Area</th></tr></thead>
+                        <tbody>
+                            <tr><td>0 to 1</td><td>$x = 0$</td><td>$0$</td><td>1</td><td>$0$</td></tr>
+                            <tr><td>1 to 2</td><td>$x = 1$</td><td>$1$</td><td>1</td><td>$1$</td></tr>
+                            <tr><td>2 to 3</td><td>$x = 2$</td><td>$2$</td><td>1</td><td>$2$</td></tr>
+                            <tr><td>3 to 4</td><td>$x = 3$</td><td>$3$</td><td>1</td><td>$3$</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size:14px; color:#888; margin-top:4px;">Enter the total area (sum of the last column).</p>
+            </div>
+            <div class="answer-area">
+                <label>Total area ≈</label>
+                <input type="text" id="answer-6-7" placeholder="6">
+                <button onclick="checkAnswer('6', '7', '6')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-6-7"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-6-7')">💡 Hint</button>
+                <div id="hint-6-7" style="display:none;">
+                    <p>Add the areas: $0 + 1 + 2 + 3 = ?$</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-6-7')">📝 Solution</button>
+                <div id="solution-6-7" style="display:none;">
+                    <p>Total area = $0 + 1 + 2 + 3 = <strong>6</strong>$</p>
+                    <p>The exact area under $y = x$ from $0$ to $4$ is a triangle: $\frac{1}{2} \times 4 \times 4 = 8$.</p>
+                    <p>Our estimate of <strong>6</strong> is close to the exact value of 8.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 8                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="6" data-problem="8">
+            <div class="problem-header">
+                <span class="problem-number">Problem 8 of 10</span>
+                <span class="problem-status" id="status-6-8">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> In the integral notation $\int f(x) dx$, what does $dx$ represent?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: It's a tiny piece of something.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-6-8" placeholder="dx represents a tiny change in x (a tiny width)." style="width:400px;">
+                <button onclick="checkAnswer('6', '8', 'dx represents a tiny change in x (a tiny width).')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-6-8"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-6-8')">💡 Hint</button>
+                <div id="hint-6-8" style="display:none;">
+                    <p>Think about the width of a rectangle. $dx$ is a tiny, tiny width.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-6-8')">📝 Solution</button>
+                <div id="solution-6-8" style="display:none;">
+                    <p>In $\int f(x) dx$, the <strong>$dx$</strong> represents a <strong>tiny change in $x$</strong> — a tiny width.</p>
+                    <p>When you multiply the height ($f(x)$) by the tiny width ($dx$), you get the area of a tiny rectangle.</p>
+                    <p>Then the integral $\int$ adds up all those tiny rectangles.</p>
+                    <p><strong>Answer: A tiny change in x (a tiny width)</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 9                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="6" data-problem="9">
+            <div class="problem-header">
+                <span class="problem-number">Problem 9 of 10</span>
+                <span class="problem-status" id="status-6-9">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> A car accelerates smoothly from 0 to 60 mph over 3 hours. The speed curve is a straight line from (0,0) to (3,60). What is the total distance?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: The area under the line is a triangle.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Total distance =</label>
+                <input type="text" id="answer-6-9" placeholder="90 miles">
+                <button onclick="checkAnswer('6', '9', '90 miles')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-6-9"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-6-9')">💡 Hint</button>
+                <div id="hint-6-9" style="display:none;">
+                    <p>Area of a triangle = (base × height) ÷ 2.</p>
+                    <p>Base = 3 hours, height = 60 mph.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-6-9')">📝 Solution</button>
+                <div id="solution-6-9" style="display:none;">
+                    <p>The area under the speed curve is a <strong>triangle</strong>.</p>
+                    <p>Base = 3 hours, height = 60 mph.</p>
+                    <p>Area = (base × height) ÷ 2 = (3 × 60) ÷ 2 = 180 ÷ 2 = <strong>90 miles</strong></p>
+                    <p>Check: Average speed = (0 + 60) ÷ 2 = 30 mph. Distance = 30 × 3 = 90 miles. ✓</p>
+                    <p><strong>Answer: 90 miles</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 10                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="6" data-problem="10">
+            <div class="problem-header">
+                <span class="problem-number">Problem 10 of 10</span>
+                <span class="problem-status" id="status-6-10">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Complete this sentence: "The derivative and the integral are ________."</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Think about addition and subtraction.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-6-10" placeholder="opposites">
+                <button onclick="checkAnswer('6', '10', 'opposites')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-6-10"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-6-10')">💡 Hint</button>
+                <div id="hint-6-10" style="display:none;">
+                    <p>Just like addition and subtraction undo each other, the derivative and integral undo each other.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-6-10')">📝 Solution</button>
+                <div id="solution-6-10" style="display:none;">
+                    <p><strong>"The derivative and the integral are <span style="font-weight:700; color:#2c3e50;">opposites</span>."</strong></p>
+                    <p>The derivative tells you how fast something is changing at a moment (speedometer).</p>
+                    <p>The integral tells you the total accumulation (odometer).</p>
+                    <p>They undo each other — this is the <strong>Fundamental Theorem of Calculus</strong>.</p>
+                    <p><strong>Answer: opposites</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- NAVIGATION                                                   -->
+        <!-- ============================================================ -->
+        <div class="navigation">
+            <a href="chapter5.html" class="btn">← Previous Chapter</a>
+            <a href="../index.html" class="btn">🏠 Back to Dashboard</a>
+            <a href="chapter7.html" class="btn">Next Chapter →</a>
+        </div>
+
+        <div style="text-align:center; margin:20px 0; font-size:13px; color:#aaa;">
+            <button onclick="resetAllProgress()" style="background:none; border:1px solid #ddd; border-radius:4px; padding:4px 12px; color:#999; cursor:pointer; font-size:12px;">
+                🔄 Reset All Progress
+            </button>
+        </div>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2026 TM BHinder · The Calculus Code</p>
+        <p class="small" style="font-size:12px; color:#bbb;">Progress saved in your browser's local storage</p>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../assets/js/progress.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

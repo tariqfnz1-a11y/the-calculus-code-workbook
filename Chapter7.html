@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7 — The Area Under the Curve</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav>
+        <a href="../index.html">← Dashboard</a>
+        <span>|</span>
+        <span><strong>Chapter 7: The Area Under the Curve</strong></span>
+        <span style="margin-left:auto;" id="chapter-progress">Progress: 0/10</span>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+
+        <h1>Chapter 7: The Area Under the Curve</h1>
+        <p style="color:#555; font-size:15px; margin-bottom:20px;">
+            "The integral is the exact area under a curve — adding up infinitely many, infinitely thin rectangles."
+        </p>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 1                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="7" data-problem="1">
+            <div class="problem-header">
+                <span class="problem-number">Problem 1 of 10</span>
+                <span class="problem-status" id="status-7-1">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> If you draw a graph of speed over time, what does the <strong>area under the curve</strong> represent?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Think about the odometer.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-7-1" placeholder="The area under a speed curve represents total distance." style="width:400px;">
+                <button onclick="checkAnswer('7', '1', 'The area under a speed curve represents total distance.')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-7-1"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-7-1')">💡 Hint</button>
+                <div id="hint-7-1" style="display:none;">
+                    <p>Speed × Time = Distance. The area under the curve is the sum of speed × tiny time for every moment.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-7-1')">📝 Solution</button>
+                <div id="solution-7-1" style="display:none;">
+                    <p>The area under a speed curve represents <strong>total distance</strong>.</p>
+                    <p>Each tiny rectangle under the curve has area = speed × tiny time = tiny distance.</p>
+                    <p>Adding up all the tiny rectangles gives the total distance.</p>
+                    <p><strong>Answer: Total distance</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 2                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="7" data-problem="2">
+            <div class="problem-header">
+                <span class="problem-number">Problem 2 of 10</span>
+                <span class="problem-status" id="status-7-2">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> A car drives at a constant speed of 60 mph for 3 hours. What is the area under the speed curve?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: The area is a rectangle: base × height.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Area =</label>
+                <input type="text" id="answer-7-2" placeholder="180">
+                <button onclick="checkAnswer('7', '2', '180')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-7-2"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-7-2')">💡 Hint</button>
+                <div id="hint-7-2" style="display:none;">
+                    <p>Area of a rectangle = base × height. Base = 3 hours, height = 60 mph.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-7-2')">📝 Solution</button>
+                <div id="solution-7-2" style="display:none;">
+                    <p>Area = base × height = 3 × 60 = <strong>180</strong></p>
+                    <p>This is also the total distance: 180 miles.</p>
+                    <p><strong>Answer: 180</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 3                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="7" data-problem="3">
+            <div class="problem-header">
+                <span class="problem-number">Problem 3 of 10</span>
+                <span class="problem-status" id="status-7-3">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> A car accelerates from 0 to 60 mph over 3 hours at a constant rate. What is the area under the speed curve?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: The area is a triangle: (base × height) ÷ 2.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Area =</label>
+                <input type="text" id="answer-7-3" placeholder="90">
+                <button onclick="checkAnswer('7', '3', '90')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-7-3"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-7-3')">💡 Hint</button>
+                <div id="hint-7-3" style="display:none;">
+                    <p>Area of a triangle = (base × height) ÷ 2. Base = 3 hours, height = 60 mph.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-7-3')">📝 Solution</button>
+                <div id="solution-7-3" style="display:none;">
+                    <p>Area = (base × height) ÷ 2 = (3 × 60) ÷ 2 = 180 ÷ 2 = <strong>90</strong></p>
+                    <p>This is also the total distance: 90 miles.</p>
+                    <p><strong>Answer: 90</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 4                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="7" data-problem="4">
+            <div class="problem-header">
+                <span class="problem-number">Problem 4 of 10</span>
+                <span class="problem-status" id="status-7-4">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Find the area under $y = 2x$ from $x = 0$ to $x = 5$.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: The area is a triangle. Base = 5, height = $2 \times 5 = 10$.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Area =</label>
+                <input type="text" id="answer-7-4" placeholder="25">
+                <button onclick="checkAnswer('7', '4', '25')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-7-4"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-7-4')">💡 Hint</button>
+                <div id="hint-7-4" style="display:none;">
+                    <p>Area of a triangle = (base × height) ÷ 2. Base = 5, height = 10.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-7-4')">📝 Solution</button>
+                <div id="solution-7-4" style="display:none;">
+                    <p>$y = 2x$</p>
+                    <p>At $x = 0$, $y = 0$. At $x = 5$, $y = 10$.</p>
+                    <p>Area = (base × height) ÷ 2 = (5 × 10) ÷ 2 = 50 ÷ 2 = <strong>25</strong></p>
+                    <p><strong>Answer: 25</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 5                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="7" data-problem="5">
+            <div class="problem-header">
+                <span class="problem-number">Problem 5 of 10</span>
+                <span class="problem-status" id="status-7-5">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Find the area under $y = 2x + 3$ from $x = 0$ to $x = 4$.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: The area is a trapezoid: $(h_1 + h_2) \div 2 \times$ base.)</p>
+                <div style="background:#faf8f5; border:1px solid #ddd; border-radius:4px; padding:12px; margin:8px 0; display:inline-block;">
+                    <p style="font-size:14px; color:#555; margin:0;">
+                        At $x = 0$, $y = 3$.<br>
+                        At $x = 4$, $y = 11$.<br>
+                        Base = 4.
+                    </p>
+                </div>
+            </div>
+            <div class="answer-area">
+                <label>Area =</label>
+                <input type="text" id="answer-7-5" placeholder="28">
+                <button onclick="checkAnswer('7', '5', '28')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-7-5"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-7-5')">💡 Hint</button>
+                <div id="hint-7-5" style="display:none;">
+                    <p>Area of a trapezoid = $(h_1 + h_2) \div 2 \times$ base.</p>
+                    <p>$h_1 = 3$, $h_2 = 11$, base = 4.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-7-5')">📝 Solution</button>
+                <div id="solution-7-5" style="display:none;">
+                    <p>Area = $(h_1 + h_2) \div 2 \times$ base</p>
+                    <p>Area = $(3 + 11) \div 2 \times 4 = 14 \div 2 \times 4 = 7 \times 4 = <strong>28</strong>$</p>
+                    <p><strong>Answer: 28</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 6                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="7" data-problem="6">
+            <div class="problem-header">
+                <span class="problem-number">Problem 6 of 10</span>
+                <span class="problem-status" id="status-7-6">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Use the left-hand sum with <strong>4 rectangles</strong> (width = 1) to estimate the area under $y = x^2$ from $x = 0$ to $x = 4$.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Use the left edge of each rectangle for the height.)</p>
+                <div style="background:#faf8f5; border:1px solid #ddd; border-radius:4px; padding:12px; margin:8px 0; display:inline-block;">
+                    <table style="width:auto; margin:0; font-size:13px;">
+                        <thead><tr><th>Interval</th><th>Left Edge</th><th>Height ($x^2$)</th><th>Width</th><th>Area</th></tr></thead>
+                        <tbody>
+                            <tr><td>0 to 1</td><td>$x = 0$</td><td>$0$</td><td>1</td><td>$0$</td></tr>
+                            <tr><td>1 to 2</td><td>$x = 1$</td><td>$1$</td><td>1</td><td>$1$</td></tr>
+                            <tr><td>2 to 3</td><td>$x = 2$</td><td>$4$</td><td>1</td><td>$4$</td></tr>
+                            <tr><td>3 to 4</td><td>$x = 3$</td><td>$9$</td><td>1</td><td>$9$</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size:14px; color:#888; margin-top:4px;">Enter the total area (sum of the last column).</p>
+            </div>
+            <div class="answer-area">
+                <label>Total area ≈</label>
+                <input type="text" id="answer-7-6" placeholder="14">
+                <button onclick="checkAnswer('7', '6', '14')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-7-6"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-7-6')">💡 Hint</button>
+                <div id="hint-7-6" style="display:none;">
+                    <p>Add the areas: $0 + 1 + 4 + 9 = ?$</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-7-6')">📝 Solution</button>
+                <div id="solution-7-6" style="display:none;">
+                    <p>Total area = $0 + 1 + 4 + 9 = <strong>14</strong>$</p>
+                    <p>The exact area under $y = x^2$ from $0$ to $4$ is $\frac{64}{3} \approx 21.33$.</p>
+                    <p>Our estimate of <strong>14</strong> is a rough approximation (using only 4 rectangles).</p>
+                    <p><strong>Answer: 14</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 7                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="7" data-problem="7">
+            <div class="problem-header">
+                <span class="problem-number">Problem 7 of 10</span>
+                <span class="problem-status" id="status-7-7">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Use the right-hand sum with <strong>4 rectangles</strong> (width = 1) to estimate the area under $y = x^2$ from $x = 0$ to $x = 4$.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Use the right edge of each rectangle for the height.)</p>
+                <div style="background:#faf8f5; border:1px solid #ddd; border-radius:4px; padding:12px; margin:8px 0; display:inline-block;">
+                    <table style="width:auto; margin:0; font-size:13px;">
+                        <thead><tr><th>Interval</th><th>Right Edge</th><th>Height ($x^2$)</th><th>Width</th><th>Area</th></tr></thead>
+                        <tbody>
+                            <tr><td>0 to 1</td><td>$x = 1$</td><td>$1$</td><td>1</td><td>$1$</td></tr>
+                            <tr><td>1 to 2</td><td>$x = 2$</td><td>$4$</td><td>1</td><td>$4$</td></tr>
+                            <tr><td>2 to 3</td><td>$x = 3$</td><td>$9$</td><td>1</td><td>$9$</td></tr>
+                            <tr><td>3 to 4</td><td>$x = 4$</td><td>$16$</td><td>1</td><td>$16$</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size:14px; color:#888; margin-top:4px;">Enter the total area (sum of the last column).</p>
+            </div>
+            <div class="answer-area">
+                <label>Total area ≈</label>
+                <input type="text" id="answer-7-7" placeholder="30">
+                <button onclick="checkAnswer('7', '7', '30')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-7-7"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-7-7')">💡 Hint</button>
+                <div id="hint-7-7" style="display:none;">
+                    <p>Add the areas: $1 + 4 + 9 + 16 = ?$</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-7-7')">📝 Solution</button>
+                <div id="solution-7-7" style="display:none;">
+                    <p>Total area = $1 + 4 + 9 + 16 = <strong>30</strong>$</p>
+                    <p>The exact area is $\frac{64}{3} \approx 21.33$.</p>
+                    <p>The left-hand sum was 14 (underestimate). The right-hand sum is 30 (overestimate).</p>
+                    <p>The average of the two is $(14 + 30) \div 2 = 22$, close to the exact value of 21.33.</p>
+                    <p><strong>Answer: 30</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 8                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="7" data-problem="8">
+            <div class="problem-header">
+                <span class="problem-number">Problem 8 of 10</span>
+                <span class="problem-status" id="status-7-8">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What happens to the rectangle estimate as you use <strong>more</strong> and <strong>thinner</strong> rectangles?</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-7-8" placeholder="The estimate gets closer to the exact area." style="width:400px;">
+                <button onclick="checkAnswer('7', '8', 'The estimate gets closer to the exact area.')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-7-8"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-7-8')">💡 Hint</button>
+                <div id="hint-7-8" style="display:none;">
+                    <p>Think about fitting more rectangles under the curve. Do they cover the area better?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-7-8')">📝 Solution</button>
+                <div id="solution-7-8" style="display:none;">
+                    <p>As you use <strong>more</strong> and <strong>thinner</strong> rectangles, the estimate gets <strong>closer to the exact area</strong>.</p>
+                    <p>When the rectangles are infinitely thin, the estimate becomes <strong>exact</strong> — that's the integral.</p>
+                    <p><strong>Answer: The estimate gets closer to the exact area.</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 9                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="7" data-problem="9">
+            <div class="problem-header">
+                <span class="problem-number">Problem 9 of 10</span>
+                <span class="problem-status" id="status-7-9">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Complete this sentence: "The integral is the exact _____ under the curve."</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: It's the space inside a shape.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-7-9" placeholder="area">
+                <button onclick="checkAnswer('7', '9', 'area')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-7-9"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-7-9')">💡 Hint</button>
+                <div id="hint-7-9" style="display:none;">
+                    <p>The integral adds up rectangles to find the space under the curve.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-7-9')">📝 Solution</button>
+                <div id="solution-7-9" style="display:none;">
+                    <p><strong>"The integral is the exact <span style="font-weight:700; color:#2c3e50;">area</span> under the curve."</strong></p>
+                    <p>This is one of the most important definitions in calculus!</p>
+                    <p><strong>Answer: area</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 10                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="7" data-problem="10">
+            <div class="problem-header">
+                <span class="problem-number">Problem 10 of 10</span>
+                <span class="problem-status" id="status-7-10">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> If flow rate is 2 gallons per minute for 5 minutes, what is the <strong>area under the flow rate curve</strong>?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Area = rate × time. The curve is a rectangle.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Area =</label>
+                <input type="text" id="answer-7-10" placeholder="10">
+                <button onclick="checkAnswer('7', '10', '10')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-7-10"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-7-10')">💡 Hint</button>
+                <div id="hint-7-10" style="display:none;">
+                    <p>Area = base × height = 5 minutes × 2 gallons/minute = ?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-7-10')">📝 Solution</button>
+                <div id="solution-7-10" style="display:none;">
+                    <p>Area = base × height = 5 × 2 = <strong>10</strong></p>
+                    <p>This is the total water: 10 gallons.</p>
+                    <p><strong>Answer: 10</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- NAVIGATION                                                   -->
+        <!-- ============================================================ -->
+        <div class="navigation">
+            <a href="chapter6.html" class="btn">← Previous Chapter</a>
+            <a href="../index.html" class="btn">🏠 Back to Dashboard</a>
+            <a href="chapter8.html" class="btn">Next Chapter →</a>
+        </div>
+
+        <div style="text-align:center; margin:20px 0; font-size:13px; color:#aaa;">
+            <button onclick="resetAllProgress()" style="background:none; border:1px solid #ddd; border-radius:4px; padding:4px 12px; color:#999; cursor:pointer; font-size:12px;">
+                🔄 Reset All Progress
+            </button>
+        </div>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2026 TM BHinder · The Calculus Code</p>
+        <p class="small" style="font-size:12px; color:#bbb;">Progress saved in your browser's local storage</p>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../assets/js/progress.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

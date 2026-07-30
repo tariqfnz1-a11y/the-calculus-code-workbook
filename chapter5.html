@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5 — The Power Rule</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+<body>
+
+    <nav>
+        <a href="../index.html">← Dashboard</a>
+        <span>|</span>
+        <span><strong>Chapter 5: The Power Rule</strong></span>
+        <span style="margin-left:auto;" id="chapter-progress">Progress: 0/15</span>
+    </nav>
+
+    <main>
+        <h1>Chapter 5: The First Shortcut — The Power Rule</h1>
+        <p style="color:#555; font-size:15px;">Practice finding derivatives using the Power Rule.</p>
+
+        <!-- ===== PROBLEM 1 ===== -->
+        <div class="problem" data-chapter="5" data-problem="1">
+            <div class="problem-header">
+                <span class="problem-number">Problem 1 of 15</span>
+                <span class="problem-status" id="status-5-1">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p>Find the derivative of:</p>
+                <p class="math">$$ f(x) = x^4 $$</p>
+            </div>
+            <div class="answer-area">
+                <label>$f'(x) =$</label>
+                <input type="text" id="answer-5-1" placeholder="4x^3">
+                <button onclick="checkAnswer('5', '1', '4x^3')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-5-1"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-5-1')">💡 Hint</button>
+                <div id="hint-5-1" style="display:none;">
+                    Bring the exponent down in front, then subtract 1 from the exponent.
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-5-1')">📝 Solution</button>
+                <div id="solution-5-1" style="display:none;">
+                    <p><strong>Step 1:</strong> Identify the exponent: $n = 4$</p>
+                    <p><strong>Step 2:</strong> Apply the Power Rule: $f'(x) = 4x^{4-1}$</p>
+                    <p><strong>Step 3:</strong> Simplify: $f'(x) = 4x^3$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== PROBLEM 2 ===== -->
+        <div class="problem" data-chapter="5" data-problem="2">
+            <div class="problem-header">
+                <span class="problem-number">Problem 2 of 15</span>
+                <span class="problem-status" id="status-5-2">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p>Find the derivative of:</p>
+                <p class="math">$$ f(x) = 3x^5 $$</p>
+            </div>
+            <div class="answer-area">
+                <label>$f'(x) =$</label>
+                <input type="text" id="answer-5-2" placeholder="15x^4">
+                <button onclick="checkAnswer('5', '2', '15x^4')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-5-2"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-5-2')">💡 Hint</button>
+                <div id="hint-5-2" style="display:none;">
+                    The coefficient stays in front. Multiply the coefficient by the exponent.
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-5-2')">📝 Solution</button>
+                <div id="solution-5-2" style="display:none;">
+                    <p><strong>Step 1:</strong> Coefficient = 3, exponent = 5</p>
+                    <p><strong>Step 2:</strong> $f'(x) = 3 \times 5 \times x^{5-1}$</p>
+                    <p><strong>Step 3:</strong> $f'(x) = 15x^4$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== PROBLEM 3 ===== -->
+        <div class="problem" data-chapter="5" data-problem="3">
+            <div class="problem-header">
+                <span class="problem-number">Problem 3 of 15</span>
+                <span class="problem-status" id="status-5-3">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p>Find the derivative of:</p>
+                <p class="math">$$ f(x) = x^7 $$</p>
+            </div>
+            <div class="answer-area">
+                <label>$f'(x) =$</label>
+                <input type="text" id="answer-5-3" placeholder="7x^6">
+                <button onclick="checkAnswer('5', '3', '7x^6')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-5-3"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-5-3')">💡 Hint</button>
+                <div id="hint-5-3" style="display:none;">
+                    Bring the exponent down in front, then subtract 1.
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-5-3')">📝 Solution</button>
+                <div id="solution-5-3" style="display:none;">
+                    <p>$f'(x) = 7x^6$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== PROBLEM 4 ===== -->
+        <div class="problem" data-chapter="5" data-problem="4">
+            <div class="problem-header">
+                <span class="problem-number">Problem 4 of 15</span>
+                <span class="problem-status" id="status-5-4">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p>Find the derivative of:</p>
+                <p class="math">$$ f(x) = 2x^6 $$</p>
+            </div>
+            <div class="answer-area">
+                <label>$f'(x) =$</label>
+                <input type="text" id="answer-5-4" placeholder="12x^5">
+                <button onclick="checkAnswer('5', '4', '12x^5')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-5-4"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-5-4')">💡 Hint</button>
+                <div id="hint-5-4" style="display:none;">
+                    Coefficient × exponent, then reduce exponent by 1.
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-5-4')">📝 Solution</button>
+                <div id="solution-5-4" style="display:none;">
+                    <p>$f'(x) = 2 \times 6 \times x^{5} = 12x^5$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== PROBLEM 5 ===== -->
+        <div class="problem" data-chapter="5" data-problem="5">
+            <div class="problem-header">
+                <span class="problem-number">Problem 5 of 15</span>
+                <span class="problem-status" id="status-5-5">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p>Find the derivative of:</p>
+                <p class="math">$$ f(x) = x^2 + x^3 $$</p>
+            </div>
+            <div class="answer-area">
+                <label>$f'(x) =$</label>
+                <input type="text" id="answer-5-5" placeholder="2x+3x^2">
+                <button onclick="checkAnswer('5', '5', '2x+3x^2')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-5-5"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-5-5')">💡 Hint</button>
+                <div id="hint-5-5" style="display:none;">
+                    Find the derivative of each term separately, then add them together.
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-5-5')">📝 Solution</button>
+                <div id="solution-5-5" style="display:none;">
+                    <p>$f'(x) = 2x + 3x^2$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== PROBLEMS 6-15 (Add more using same pattern) ===== -->
+
+        <!-- ===== NAVIGATION ===== -->
+        <div class="navigation">
+            <a href="../index.html" class="btn">🏠 Back to Dashboard</a>
+            <a href="chapter6.html" class="btn">Next Chapter →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 TM BHinder · The Calculus Code</p>
+    </footer>
+
+    <script src="../assets/js/progress.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

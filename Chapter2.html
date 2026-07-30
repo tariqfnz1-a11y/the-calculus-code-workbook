@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2 — Input, Output, and Machines</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav>
+        <a href="../index.html">← Dashboard</a>
+        <span>|</span>
+        <span><strong>Chapter 2: Input, Output, and Machines</strong></span>
+        <span style="margin-left:auto;" id="chapter-progress">Progress: 0/12</span>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+
+        <h1>Chapter 2: Input, Output, and Machines</h1>
+        <p style="color:#555; font-size:15px; margin-bottom:20px;">
+            "A function is a rule that connects an input to an output."
+        </p>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 1                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="2" data-problem="1">
+            <div class="problem-header">
+                <span class="problem-number">Problem 1 of 12</span>
+                <span class="problem-status" id="status-2-1">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What is a <strong>function</strong> in mathematics?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: Think about a vending machine.)</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-2-1" placeholder="A function is a rule..." style="width:350px;">
+                <button onclick="checkAnswer('2', '1', 'A function is a rule that takes an input, does something to it, and produces an output.')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-2-1"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-2-1')">💡 Hint</button>
+                <div id="hint-2-1" style="display:none;">
+                    <p>A function is like a <strong>machine</strong>. You put something in, it follows a rule, and something comes out.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-2-1')">📝 Solution</button>
+                <div id="solution-2-1" style="display:none;">
+                    <p>A <strong>function</strong> is a rule that takes an <strong>input</strong>, does something to it, and produces an <strong>output</strong>.</p>
+                    <p>Think of it like a vending machine: Input = $1, Machine = rule, Output = snack.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 2                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="2" data-problem="2">
+            <div class="problem-header">
+                <span class="problem-number">Problem 2 of 12</span>
+                <span class="problem-status" id="status-2-2">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What are the <strong>four ways</strong> we describe a function?</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">(Hint: The "Rule of Four.")</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-2-2" placeholder="Verbal, Numerical, Visual, Algebraic" style="width:350px;">
+                <button onclick="checkAnswer('2', '2', 'Verbal, Numerical, Visual, Algebraic')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-2-2"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-2-2')">💡 Hint</button>
+                <div id="hint-2-2" style="display:none;">
+                    <p>Think about the four ways you can describe something: with words, with numbers, with a picture, and with a formula.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-2-2')">📝 Solution</button>
+                <div id="solution-2-2" style="display:none;">
+                    <p>The <strong>Rule of Four</strong> describes functions in four ways:</p>
+                    <ol>
+                        <li><strong>Verbal</strong> — In plain English</li>
+                        <li><strong>Numerical</strong> — With numbers in a table</li>
+                        <li><strong>Visual</strong> — With a graph or picture</li>
+                        <li><strong>Algebraic</strong> — With symbols (a formula)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 3                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="2" data-problem="3">
+            <div class="problem-header">
+                <span class="problem-number">Problem 3 of 12</span>
+                <span class="problem-status" id="status-2-3">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> If the rule is "multiply by 4," what is the output when the input is 5?</p>
+            </div>
+            <div class="answer-area">
+                <label>Output =</label>
+                <input type="text" id="answer-2-3" placeholder="20">
+                <button onclick="checkAnswer('2', '3', '20')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-2-3"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-2-3')">💡 Hint</button>
+                <div id="hint-2-3" style="display:none;">
+                    <p>Multiply the input by 4.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-2-3')">📝 Solution</button>
+                <div id="solution-2-3" style="display:none;">
+                    <p>Input = 5</p>
+                    <p>Rule = "multiply by 4"</p>
+                    <p>Output = 5 × 4 = <strong>20</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 4                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="2" data-problem="4">
+            <div class="problem-header">
+                <span class="problem-number">Problem 4 of 12</span>
+                <span class="problem-status" id="status-2-4">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> In the function $y = 3x$, what is $y$ when $x = 7$?</p>
+            </div>
+            <div class="answer-area">
+                <label>$y =$</label>
+                <input type="text" id="answer-2-4" placeholder="21">
+                <button onclick="checkAnswer('2', '4', '21')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-2-4"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-2-4')">💡 Hint</button>
+                <div id="hint-2-4" style="display:none;">
+                    <p>Multiply $x$ by 3.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-2-4')">📝 Solution</button>
+                <div id="solution-2-4" style="display:none;">
+                    <p>$y = 3x$</p>
+                    <p>When $x = 7$: $y = 3 \times 7 = <strong>21</strong>$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 5                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="2" data-problem="5">
+            <div class="problem-header">
+                <span class="problem-number">Problem 5 of 12</span>
+                <span class="problem-status" id="status-2-5">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What is the <strong>verbal</strong> rule for the function $y = x + 5$?</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-2-5" placeholder="Add 5 to the input" style="width:250px;">
+                <button onclick="checkAnswer('2', '5', 'Add 5 to the input')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-2-5"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-2-5')">💡 Hint</button>
+                <div id="hint-2-5" style="display:none;">
+                    <p>What operation is being done to $x$ in $y = x + 5$?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-2-5')">📝 Solution</button>
+                <div id="solution-2-5" style="display:none;">
+                    <p>$y = x + 5$ means: <strong>"Add 5 to the input."</strong></p>
+                    <p>Whatever you put in for $x$, you add 5 to get $y$.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 6                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="2" data-problem="6">
+            <div class="problem-header">
+                <span class="problem-number">Problem 6 of 12</span>
+                <span class="problem-status" id="status-2-6">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Fill in the missing values in this table for the function $y = 2x$:</p>
+                <div style="background:#faf8f5; border:1px solid #ddd; border-radius:4px; padding:12px; margin:8px 0; display:inline-block;">
+                    <table style="width:auto; margin:0; font-size:15px;">
+                        <thead><tr><th>$x$</th><th>$y$</th></tr></thead>
+                        <tbody>
+                            <tr><td>0</td><td>0</td></tr>
+                            <tr><td>1</td><td>2</td></tr>
+                            <tr><td>2</td><td>4</td></tr>
+                            <tr><td>3</td><td>___</td></tr>
+                            <tr><td>4</td><td>___</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size:14px; color:#888; margin-top:4px;">Enter the missing values as: 6, 8</p>
+            </div>
+            <div class="answer-area">
+                <label>Missing values:</label>
+                <input type="text" id="answer-2-6" placeholder="6, 8" style="width:120px;">
+                <button onclick="checkAnswer('2', '6', '6, 8')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-2-6"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-2-6')">💡 Hint</button>
+                <div id="hint-2-6" style="display:none;">
+                    <p>$y = 2x$. Multiply each $x$ value by 2.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-2-6')">📝 Solution</button>
+                <div id="solution-2-6" style="display:none;">
+                    <p>$y = 2x$</p>
+                    <p>When $x = 3$: $y = 2 \times 3 = 6$</p>
+                    <p>When $x = 4$: $y = 2 \times 4 = 8$</p>
+                    <p><strong>Missing values: 6, 8</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 7                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="2" data-problem="7">
+            <div class="problem-header">
+                <span class="problem-number">Problem 7 of 12</span>
+                <span class="problem-status" id="status-2-7">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Find the <strong>algebraic</strong> rule for this table:</p>
+                <div style="background:#faf8f5; border:1px solid #ddd; border-radius:4px; padding:12px; margin:8px 0; display:inline-block;">
+                    <table style="width:auto; margin:0; font-size:15px;">
+                        <thead><tr><th>$x$</th><th>$y$</th></tr></thead>
+                        <tbody>
+                            <tr><td>0</td><td>3</td></tr>
+                            <tr><td>1</td><td>5</td></tr>
+                            <tr><td>2</td><td>7</td></tr>
+                            <tr><td>3</td><td>9</td></tr>
+                            <tr><td>4</td><td>11</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size:14px; color:#888; margin-top:4px;">Enter the rule as: y = 2x + 3</p>
+            </div>
+            <div class="answer-area">
+                <label>Rule:</label>
+                <input type="text" id="answer-2-7" placeholder="y = 2x + 3" style="width:200px;">
+                <button onclick="checkAnswer('2', '7', 'y = 2x + 3')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-2-7"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-2-7')">💡 Hint</button>
+                <div id="hint-2-7" style="display:none;">
+                    <p>Look at the pattern: when $x$ goes up by 1, $y$ goes up by 2. So the rule has "$2x$" in it. Then look at what happens when $x = 0$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-2-7')">📝 Solution</button>
+                <div id="solution-2-7" style="display:none;">
+                    <p>When $x$ goes up by 1, $y$ goes up by <strong>2</strong>. So the rule has $2x$.</p>
+                    <p>When $x = 0$, $y = 3$. So we add 3.</p>
+                    <p><strong>Rule: $y = 2x + 3$</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 8                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="2" data-problem="8">
+            <div class="problem-header">
+                <span class="problem-number">Problem 8 of 12</span>
+                <span class="problem-status" id="status-2-8">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> In the function $y = 4x + 2$, what is $y$ when $x = 3$?</p>
+            </div>
+            <div class="answer-area">
+                <label>$y =$</label>
+                <input type="text" id="answer-2-8" placeholder="14">
+                <button onclick="checkAnswer('2', '8', '14')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-2-8"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-2-8')">💡 Hint</button>
+                <div id="hint-2-8" style="display:none;">
+                    <p>Multiply $x$ by 4, then add 2.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-2-8')">📝 Solution</button>
+                <div id="solution-2-8" style="display:none;">
+                    <p>$y = 4x + 2$</p>
+                    <p>When $x = 3$: $y = 4(3) + 2 = 12 + 2 = <strong>14</strong>$</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 9                                                     -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="2" data-problem="9">
+            <div class="problem-header">
+                <span class="problem-number">Problem 9 of 12</span>
+                <span class="problem-status" id="status-2-9">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> What does the "<strong>Mental Zoom</strong>" help you do when reading a graph?</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-2-9" placeholder="It helps you see..." style="width:350px;">
+                <button onclick="checkAnswer('2', '9', 'It helps you see the relationship between x and y and whether the function is increasing or decreasing.')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-2-9"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-2-9')">💡 Hint</button>
+                <div id="hint-2-9" style="display:none;">
+                    <p>Think about what you see on a graph: does it go up? Down? Flat? Curved?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-2-9')">📝 Solution</button>
+                <div id="solution-2-9" style="display:none;">
+                    <p>The <strong>Mental Zoom</strong> helps you read a graph by asking:</p>
+                    <ul>
+                        <li>What happens to $y$ when $x$ goes up?</li>
+                        <li>Is it increasing or decreasing?</li>
+                        <li>Is it steep or flat?</li>
+                        <li>What's the overall shape?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 10                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="2" data-problem="10">
+            <div class="problem-header">
+                <span class="problem-number">Problem 10 of 12</span>
+                <span class="problem-status" id="status-2-10">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> Complete this sentence: "Multiplication is just repeated ________."</p>
+            </div>
+            <div class="answer-area">
+                <label>Answer:</label>
+                <input type="text" id="answer-2-10" placeholder="addition">
+                <button onclick="checkAnswer('2', '10', 'addition')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-2-10"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-2-10')">💡 Hint</button>
+                <div id="hint-2-10" style="display:none;">
+                    <p>$3 \times 5 = 3 + 3 + 3 + 3 + 3$. What operation is being repeated?</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-2-10')">📝 Solution</button>
+                <div id="solution-2-10" style="display:none;">
+                    <p>"Multiplication is just repeated <strong>addition</strong>."</p>
+                    <p>Example: $3 \times 5 = 3 + 3 + 3 + 3 + 3 = 15$</p>
+                    <p>Similarly, division is repeated <strong>subtraction</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 11                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="2" data-problem="11">
+            <div class="problem-header">
+                <span class="problem-number">Problem 11 of 12</span>
+                <span class="problem-status" id="status-2-11">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> A plumber charges \$50 per hour plus a \$30 call-out fee. Write a function for the total cost $C$ in terms of hours $h$.</p>
+                <p style="font-size:14px; color:#888; margin-top:4px;">Enter the rule as: C = 50h + 30</p>
+            </div>
+            <div class="answer-area">
+                <label>Function:</label>
+                <input type="text" id="answer-2-11" placeholder="C = 50h + 30" style="width:250px;">
+                <button onclick="checkAnswer('2', '11', 'C = 50h + 30')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-2-11"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-2-11')">💡 Hint</button>
+                <div id="hint-2-11" style="display:none;">
+                    <p>Total cost = (rate × hours) + call-out fee.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-2-11')">📝 Solution</button>
+                <div id="solution-2-11" style="display:none;">
+                    <p>Rate = \$50 per hour</p>
+                    <p>Call-out fee = \$30</p>
+                    <p>Total cost = (50 × hours) + 30</p>
+                    <p><strong>$C = 50h + 30$</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEM 12                                                    -->
+        <!-- ============================================================ -->
+        <div class="problem" data-chapter="2" data-problem="12">
+            <div class="problem-header">
+                <span class="problem-number">Problem 12 of 12</span>
+                <span class="problem-status" id="status-2-12">⬜</span>
+            </div>
+            <div class="problem-text">
+                <p><strong>Question:</strong> If the input is 6 and the output is 18, and the rule is "multiply by $k$," what is the value of $k$?</p>
+            </div>
+            <div class="answer-area">
+                <label>$k =$</label>
+                <input type="text" id="answer-2-12" placeholder="3">
+                <button onclick="checkAnswer('2', '12', '3')">Submit</button>
+            </div>
+            <div class="feedback" id="feedback-2-12"></div>
+            <div class="hint-area">
+                <button onclick="toggleHint('hint-2-12')">💡 Hint</button>
+                <div id="hint-2-12" style="display:none;">
+                    <p>Output = Input × $k$. So $18 = 6 \times k$.</p>
+                </div>
+            </div>
+            <div class="solution-area">
+                <button onclick="toggleSolution('solution-2-12')">📝 Solution</button>
+                <div id="solution-2-12" style="display:none;">
+                    <p>Output = Input × $k$</p>
+                    <p>$18 = 6 \times k$</p>
+                    <p>$k = 18 \div 6 = <strong>3</strong>$</p>
+                    <p><strong>Answer: $k = 3$</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- NAVIGATION                                                   -->
+        <!-- ============================================================ -->
+        <div class="navigation">
+            <a href="chapter1.html" class="btn">← Previous Chapter</a>
+            <a href="../index.html" class="btn">🏠 Back to Dashboard</a>
+            <a href="chapter3.html" class="btn">Next Chapter →</a>
+        </div>
+
+        <div style="text-align:center; margin:20px 0; font-size:13px; color:#aaa;">
+            <button onclick="resetAllProgress()" style="background:none; border:1px solid #ddd; border-radius:4px; padding:4px 12px; color:#999; cursor:pointer; font-size:12px;">
+                🔄 Reset All Progress
+            </button>
+        </div>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2026 TM BHinder · The Calculus Code</p>
+        <p class="small" style="font-size:12px; color:#bbb;">Progress saved in your browser's local storage</p>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../assets/js/progress.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
