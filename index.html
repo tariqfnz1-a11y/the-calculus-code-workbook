@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Workbook — The Calculus Code</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <h1>📚 The Calculus Code — Interactive Workbook</h1>
+        <p class="subtitle">"Pump, Not a Filter" — Master Calculus Through Practice</p>
+        <p class="small">Over 140 problems with instant feedback</p>
+    </header>
+
+    <!-- ===== PROGRESS OVERVIEW ===== -->
+    <section id="dashboard">
+        <div class="progress-overview">
+            <h2>Your Progress</h2>
+            <div class="progress-bar-container">
+                <div id="progress-bar" style="width:0%;"></div>
+            </div>
+            <p id="progress-text">0 of 140+ problems solved</p>
+            <p class="small" style="color:#888;">Progress is saved automatically in your browser</p>
+        </div>
+
+        <!-- ===== PART 1: Foundations ===== -->
+        <div class="part">
+            <h2>📖 Part 1: Foundations (Chapters 1-4)</h2>
+            <div class="chapter-grid">
+                <div class="chapter-card"><h3>Chapter 1</h3><p>The Big Secret</p><div class="chapter-progress" id="ch1-progress">0/10</div><a href="chapters/chapter1.html" class="btn">Start</a></div>
+                <div class="chapter-card"><h3>Chapter 2</h3><p>Input, Output, and Machines</p><div class="chapter-progress" id="ch2-progress">0/12</div><a href="chapters/chapter2.html" class="btn">Start</a></div>
+                <div class="chapter-card"><h3>Chapter 3</h3><p>The Instant Speedometer</p><div class="chapter-progress" id="ch3-progress">0/10</div><a href="chapters/chapter3.html" class="btn">Start</a></div>
+                <div class="chapter-card"><h3>Chapter 4</h3><p>Walking Up Hills</p><div class="chapter-progress" id="ch4-progress">0/12</div><a href="chapters/chapter4.html" class="btn">Start</a></div>
+            </div>
+        </div>
+
+        <!-- ===== PART 2: Core Calculus ===== -->
+        <div class="part">
+            <h2>📖 Part 2: Core Calculus (Chapters 5-8)</h2>
+            <div class="chapter-grid">
+                <div class="chapter-card"><h3>Chapter 5</h3><p>The First Shortcut — Power Rule</p><div class="chapter-progress" id="ch5-progress">0/15</div><a href="chapters/chapter5.html" class="btn">Start</a></div>
+                <div class="chapter-card"><h3>Chapter 6</h3><p>The Odometer Trick</p><div class="chapter-progress" id="ch6-progress">0/10</div><a href="chapters/chapter6.html" class="btn">Start</a></div>
+                <div class="chapter-card"><h3>Chapter 7</h3><p>The Area Under the Curve</p><div class="chapter-progress" id="ch7-progress">0/10</div><a href="chapters/chapter7.html" class="btn">Start</a></div>
+                <div class="chapter-card"><h3>Chapter 8</h3><p>The Great Reversal</p><div class="chapter-progress" id="ch8-progress">0/12</div><a href="chapters/chapter8.html" class="btn">Start</a></div>
+            </div>
+        </div>
+
+        <!-- ===== PART 3: Advanced Topics ===== -->
+        <div class="part">
+            <h2>📖 Part 3: Advanced Topics (Chapters 9-11)</h2>
+            <div class="chapter-grid">
+                <div class="chapter-card"><h3>Chapter 9</h3><p>The Super-Function — e^x</p><div class="chapter-progress" id="ch9-progress">0/10</div><a href="chapters/chapter9.html" class="btn">Start</a></div>
+                <div class="chapter-card"><h3>Chapter 10</h3><p>The Circle Logic — Sine/Cosine</p><div class="chapter-progress" id="ch10-progress">0/10</div><a href="chapters/chapter10.html" class="btn">Start</a></div>
+                <div class="chapter-card"><h3>Chapter 11</h3><p>Finding the Peak — Optimization</p><div class="chapter-progress" id="ch11-progress">0/12</div><a href="chapters/chapter11.html" class="btn">Start</a></div>
+            </div>
+        </div>
+
+        <!-- ===== CHALLENGES ===== -->
+        <div class="part">
+            <h2>🏆 Challenge Section</h2>
+            <div class="chapter-grid">
+                <div class="chapter-card"><h3>🌅 Epilogue</h3><p>The Horizon</p><div class="chapter-progress" id="epilogue-progress">0/12</div><a href="epilogue/epilogue.html" class="btn">Start</a></div>
+                <div class="chapter-card"><h3>👮 Police Proofs</h3><p>Challenge Problems</p><div class="chapter-progress" id="police-progress">0/10</div><a href="epilogue/police-proofs.html" class="btn">Start</a></div>
+                <div class="chapter-card"><h3>📝 Mixed Review</h3><p>Comprehensive Practice</p><div class="chapter-progress" id="mixed-progress">0/15</div><a href="epilogue/mixed-review.html" class="btn">Start</a></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 TM BHinder · The Calculus Code</p>
+        <p class="small" style="font-size:12px; color:#bbb;">Progress saved in your browser's local storage</p>
+    </footer>
+
+    <script src="assets/js/progress.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
